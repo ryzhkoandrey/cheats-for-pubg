@@ -1,33 +1,41 @@
 // =============== NAVBAR__LANGUAGE ===============
 
-// Получаем все блоки выбора языка
-const languages = document.querySelectorAll('.navbar__language');
+document.querySelectorAll('.navbar__language').forEach((languageSelector) => {
+    const toggleButton = languageSelector.querySelector('.navbar__language-toggler');
+    const languageList = languageSelector.querySelector('.navbar__language-list');
 
-// Добавляем обработчик для каждого блока
-languages.forEach((language) => {
-    const languageToggler = language.querySelector('.navbar__language-toggler');
-
-    // Открытие/закрытие меню при клике на кнопку
-    languageToggler.addEventListener('click', (event) => {
+    toggleButton.addEventListener('click', (event) => {
         event.preventDefault();
 
-        // Закрываем все остальные меню
-        languages.forEach((otherSelector) => {
-            if (otherSelector !== language) {
-                otherSelector.classList.remove('navbar__language--active');
-            }
+        // Проверяем, активен ли текущий languageSelector
+        const isActive = languageSelector.classList.contains('navbar__language--active');
+
+        // Сбрасываем все другие открытые блоки
+        document.querySelectorAll('.navbar__language').forEach((otherSelector) => {
+            const otherList = otherSelector.querySelector('.navbar__language-list');
+            otherSelector.classList.remove('navbar__language--active');
+            otherList.removeAttribute('style'); // Убираем стиль высоты
         });
 
-        // Переключаем состояние текущего меню
-        language.classList.toggle('navbar__language--active');
+        // Если текущий был неактивен, активируем его
+        if (!isActive) {
+            languageSelector.classList.add('navbar__language--active');
+            languageList.style.maxHeight = languageList.scrollHeight + 'px'; // Устанавливаем высоту
+        } else {
+            // Если был активен, деактивируем
+            languageSelector.classList.remove('navbar__language--active');
+            languageList.removeAttribute('style'); // Убираем высоту
+        }
     });
 });
 
-// Закрытие всех меню при клике вне любого блока
+// Закрываем все списки при клике вне блоков
 document.addEventListener('click', (event) => {
-    languages.forEach((language) => {
-        if (!language.contains(event.target)) {
-            language.classList.remove('navbar__language--active');
+    document.querySelectorAll('.navbar__language').forEach((languageSelector) => {
+        if (!languageSelector.contains(event.target)) {
+            const languageList = languageSelector.querySelector('.navbar__language-list');
+            languageSelector.classList.remove('navbar__language--active');
+            languageList.removeAttribute('style'); // Убираем высоту
         }
     });
 });
