@@ -1,10 +1,10 @@
 // =============== NAVBAR__LANGUAGE ===============
 
 document.querySelectorAll('.navbar__language').forEach((languageSelector) => {
-    const Languagetoggler = languageSelector.querySelector('.navbar__language-toggler');
+    const LanguageToggler = languageSelector.querySelector('.navbar__language-toggler');
     const languageList = languageSelector.querySelector('.navbar__language-list');
 
-    Languagetoggler.addEventListener('click', (event) => {
+    LanguageToggler.addEventListener('click', (event) => {
         event.preventDefault();
 
         // Проверяем, активен ли текущий languageSelector
