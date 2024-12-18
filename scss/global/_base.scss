@@ -1,0 +1,15 @@
+body {
+    overflow-x: hidden;
+    min-width: 320px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-primary);
+    background: #fff;
+}
+
+a,
+button,
+svg {
+    transition: all .2s;
+}

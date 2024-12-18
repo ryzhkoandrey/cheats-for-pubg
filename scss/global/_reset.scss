@@ -1,0 +1,102 @@
+// Universal reset
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    vertical-align: baseline;
+    border: none;
+    outline: none;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 100%;
+}
+
+// Inline elements
+
+a,
+label,
+input {
+    display: inline-block;
+}
+
+// Link
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+// Images and SVG
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+// List
+
+ul,
+ol {
+    list-style: none;
+}
+
+// Blockquote
+
+q,
+blockquote {
+    quotes: none;
+}
+
+// Table
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// Form
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+}
+
+button,
+input[type="submit"] {
+    display: inline-block;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+}
+
+button,
+label,
+input[type="checkbox"],
+input[type="radio"],
+input[type="submit"] {
+    cursor: pointer;
+}
+
+address {
+    font-style: normal;
+}

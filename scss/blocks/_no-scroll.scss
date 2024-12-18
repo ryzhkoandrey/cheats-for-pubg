@@ -1,0 +1,6 @@
+.no-scroll {
+
+    @include mobile {
+        overflow: hidden;
+    }
+}
