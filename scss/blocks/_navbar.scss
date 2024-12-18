@@ -4,9 +4,105 @@
     align-items: flex-start;
     gap: 30px;
 
+    // logo
+
     &__logo {
         margin-top: 12px;
     }
 
     &__logo-image {}
+
+    &__menu {
+        margin-top: 20px;
+    }
+
+    // menu
+
+    &__menu-list {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__menu-item {}
+
+    &__menu-link {
+        font-weight: 700;
+        font-size: 17px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    // admin
+
+    &__admin {
+        display: flex;
+        gap: 15px;
+    }
+
+    // language
+
+    &__language {
+        border-radius: 5px;
+        width: 123px;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);
+        background: #fff;
+    }
+
+    &__language-toggler {
+        position: relative;
+        padding: 19px 16px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 27px;
+            right: 12px;
+            display: block;
+            width: 10px;
+            height: 5px;
+            background: url('../img/language-arrow.svg') no-repeat center;
+        }
+    }
+
+    &__language-flag {
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);
+    }
+
+    &__language-text {
+        font-weight: 700;
+        font-size: 17px;
+        color: #2e3a59;
+    }
+
+    &__language-list {}
+
+    &__language-item {}
+
+    &__language-link {
+        padding: 19px 16px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    // login
+
+    &__login {
+        border-radius: 5px;
+        width: 77px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(157deg, #ff9b05 0%, #ff8f3f 100%);
+        box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    &__login-icon {}
 }
