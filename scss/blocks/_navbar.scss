@@ -69,6 +69,21 @@
         width: 123px;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);
         background: #fff;
+        transition: all .2s;
+
+        &:hover {
+
+            .navbar__language-text {
+                color: #fb8500;
+            }
+        }
+
+        &--active {
+
+            .navbar__language-list {
+                display: block;
+            }
+        }
     }
 
     &__language-toggler {
@@ -99,9 +114,12 @@
         font-weight: 700;
         font-size: 17px;
         color: #2e3a59;
+        transition: all .2s;
     }
 
-    &__language-list {}
+    &__language-list {
+        display: none;
+    }
 
     &__language-item {}
 
@@ -126,7 +144,7 @@
         box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
 
         &:hover {
-            opacity: 0.8;
+            opacity: 0.9;
         }
     }
 
