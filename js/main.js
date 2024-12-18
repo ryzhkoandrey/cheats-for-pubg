@@ -1,10 +1,10 @@
 // =============== NAVBAR__LANGUAGE ===============
 
 document.querySelectorAll('.navbar__language').forEach((languageSelector) => {
-    const toggleButton = languageSelector.querySelector('.navbar__language-toggler');
+    const Languagetoggler = languageSelector.querySelector('.navbar__language-toggler');
     const languageList = languageSelector.querySelector('.navbar__language-list');
 
-    toggleButton.addEventListener('click', (event) => {
+    Languagetoggler.addEventListener('click', (event) => {
         event.preventDefault();
 
         // Проверяем, активен ли текущий languageSelector
@@ -14,7 +14,7 @@ document.querySelectorAll('.navbar__language').forEach((languageSelector) => {
         document.querySelectorAll('.navbar__language').forEach((otherSelector) => {
             const otherList = otherSelector.querySelector('.navbar__language-list');
             otherSelector.classList.remove('navbar__language--active');
-            otherList.removeAttribute('style'); // Убираем стиль высоты
+            otherList.removeAttribute('style'); // Убираем высоту
         });
 
         // Если текущий был неактивен, активируем его
