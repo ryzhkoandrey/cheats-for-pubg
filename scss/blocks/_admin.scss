@@ -1,0 +1,42 @@
+.admin {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &__language {
+        border-radius: 5px;
+        width: 123px;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);
+        background: #fff;
+    }
+
+    &__language-toggler {
+        padding: 19px 16px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__language-flag {
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);
+    }
+
+    &__language-text {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 17px;
+        color: #2e3a59;
+    }
+
+    &__language-list {
+        display: none;
+    }
+
+    &__language-item {}
+
+    &__language-link {}
+
+    &__login {}
+
+    &__login-icon {}
+}
