@@ -1,21 +1,14 @@
 .btn {
     border-radius: 5px;
-    padding: 27px 34px;
+    padding: 23px 47px;
     min-width: 198px;
-    height: 78px;
+    height: 68px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 18px;
     font-weight: 600;
     font-size: 18px;
     color: #fff;
-
-    &--large {
-        padding: 24px 34px 24px 48px;
-        min-width: 240px;
-        gap: 36px;
-    }
 
     &--fill {
         background: linear-gradient(157deg, #ff9b05 0%, #ff8f3f 100%);
@@ -28,6 +21,7 @@
     &--outline {
         padding: 28px 38px;
         min-width: 257px;
+        height: 78px;
         border: 1px solid #6cffff;
 
         &:hover {
@@ -36,5 +30,34 @@
         }
     }
 
-    &__icon {}
+    &--arrow {
+        padding: 27px 34px;
+        height: 78px;
+        gap: 18px;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 44px;
+            height: 24px;
+            background: url('../img/arrow-right.svg') no-repeat center / cover;
+        }
+    }
+
+    &--arrow-large {
+        padding: 24px 34px 24px 48px;
+        min-width: 240px;
+        height: 78px;
+        gap: 36px;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 54px;
+            height: 30px;
+            background: url('../img/arrow-right.svg') no-repeat center / cover;
+        }
+    }
+
+    &--video {}
 }
