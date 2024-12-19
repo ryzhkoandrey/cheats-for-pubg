@@ -112,5 +112,9 @@
 
     // tabs
 
-    &__tabs {}
+    &__tabs {
+        position: absolute;
+        top: -23px;
+        left: 26px;
+    }
 }

@@ -1,10 +1,79 @@
 .tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
 
-    &__btn {}
+    &__btn {
+        border-radius: 5px;
+        height: 73px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.03);
+        background: #fff;
 
-    &__btn--active {}
+        &:hover {
+            box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.07);
 
-    &__btn-icon {}
+            .tabs__btn-icon {
 
-    &__btn-text {}
+                path {
+                    fill: #0aa6fe;
+                }
+            }
+
+            .tabs__btn-text {
+                color: #0aa6fe;
+            }
+        }
+
+        &--windows {
+            width: 206px;
+        }
+
+        &--android {
+            width: 195px;
+        }
+
+        &--ios {
+            width: 135px;
+
+            .tabs__btn-icon {
+                transform: translateY(-4px);
+            }
+        }
+
+        &--active {
+            box-shadow: 0 15px 25px 0 rgba(0, 163, 255, 0.3);
+            background: linear-gradient(128deg, #0aa6fe 0%, #05ffff 100%);
+            pointer-events: none;
+
+            .tabs__btn-icon {
+
+                path {
+                    fill: #fff;
+                }
+            }
+
+            .tabs__btn-text {
+                color: #fff;
+            }
+        }
+    }
+
+    &__btn-icon {
+
+        path {
+            transition: all .2s;
+        }
+    }
+
+    &__btn-text {
+        font-weight: 700;
+        font-size: 18px;
+        color: #aaa;
+        transition: all .2s;
+    }
 }
