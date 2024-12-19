@@ -59,5 +59,19 @@
         }
     }
 
-    &--video {}
+    &--video {
+        padding: 22px 28px;
+        min-width: 288px;
+        height: 78px;
+        gap: 18px;
+        background: #ff3b3b;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 33px;
+            height: 33px;
+            background: url('../img/play.svg') no-repeat center / cover;
+        }
+    }
 }
