@@ -1,9 +1,58 @@
 .hero {
-    padding-top: 183px;
-    height: 1027px;
+    padding-top: 190px;
+    min-height: 1027px;
     background: url('../img/hero-bg.jpg') no-repeat top center / cover;
 
     @media (min-resolution: 192dpi) {
         background-image: url('../img/hero-bg@2x.png');
+    }
+
+    &__inner {
+        max-width: 703px;
+    }
+
+    &__header {
+        margin-bottom: 27px;
+
+        &::after {
+            content: '';
+            display: block;
+            margin-top: 28px;
+            width: 110px;
+            height: 5px;
+            background: linear-gradient(174deg, #ffac8b 0%, #ff4900 100%);
+        }
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: 55px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    &__title-image {
+        transform: translate(4px, 13px);
+        margin-left: -12px;
+        display: inline-block;
+    }
+
+    &__body {
+        margin-bottom: 46px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__description {
+        font-weight: 600;
+        font-size: 18px;
+        color: #fff;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        gap: 34px;
     }
 }
