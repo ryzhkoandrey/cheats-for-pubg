@@ -18,14 +18,23 @@
     }
 
     &--fill {
-        box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
         background: linear-gradient(157deg, #ff9b05 0%, #ff8f3f 100%);
+
+        &:hover {
+            box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.16);
+        }
     }
 
     &--outline {
         padding: 28px 38px;
         min-width: 257px;
-        border: 1px solid #6CFFFF;
+        border: 1px solid #6cffff;
+
+        &:hover {
+            color: #6cffff;
+            border-color: #fff;
+            box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+        }
     }
 
     &__icon {}
