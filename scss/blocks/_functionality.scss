@@ -1,7 +1,36 @@
 .functionality {
 
     &__inner {
+        position: relative;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
+    &__heading {}
+
+    &__title {}
+
+    &__description {}
+
+    &__info {}
+
+    &__list {}
+
+    &__item {}
+
+    &__item-strong {}
+
+    &__note {}
+
+    &__note-icon {}
+
+    &__note-text {}
+
+    &__btns {}
+
+    &__gallery {
+        grid-row: 1 / 3;
+    }
+
+    &__tabs {}
 }
