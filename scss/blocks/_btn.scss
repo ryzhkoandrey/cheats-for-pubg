@@ -1,21 +1,32 @@
 .btn {
     border-radius: 5px;
-    padding: 27px;
+    padding: 27px 34px;
+    min-width: 198px;
+    height: 78px;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 18px;
-    box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
-    background: linear-gradient(157deg, #ff9b05 0%, #ff8f3f 100%);
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
 
-    &__text {
-        font-weight: 600;
-        font-size: 18px;
-        color: #fff;
+    &--large {
+        padding: 24px 34px 24px 48px;
+        min-width: 240px;
+        gap: 36px;
+    }
+
+    &--fill {
+        box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+        background: linear-gradient(157deg, #ff9b05 0%, #ff8f3f 100%);
+    }
+
+    &--outline {
+        padding: 28px 38px;
+        min-width: 257px;
+        border: 1px solid #6CFFFF;
     }
 
     &__icon {}
-
-    &--large {}
-
-    &--outline {}
 }
