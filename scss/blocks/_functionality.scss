@@ -113,4 +113,13 @@
     // tabs
 
     &__tabs {}
+
+    &__tab {
+
+        &--active {}
+    }
+
+    &__tab-icon {}
+
+    &__tab-text {}
 }
