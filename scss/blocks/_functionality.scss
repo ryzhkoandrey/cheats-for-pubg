@@ -60,12 +60,24 @@
 
     &__gallery-btn {
 
+        &:hover {
+
+            path {
+                fill: #fb8500;
+            }
+        }
+
         &--prev {}
 
         &--next {}
     }
 
-    &__gallery-btn-icon {}
+    &__gallery-btn-icon {
+
+        path {
+            fill: #0aa6fe;
+        }
+    }
 
     // heading
 

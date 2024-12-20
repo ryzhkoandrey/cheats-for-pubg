@@ -1,0 +1,13 @@
+// functionality
+
+.functionality__gallery {
+
+    .swiper-button-disabled,
+    .swiper-button-disabled:hover {
+        cursor: default;
+
+        path {
+            fill: #e2e2e2;
+        }
+    }
+}
