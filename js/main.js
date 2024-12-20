@@ -36,19 +36,25 @@ document.addEventListener('click', (event) => {
 
 // =============== TABS ===============
 
-const tabBtns = document.querySelectorAll('.tabs-btn');
-const tabContents = document.querySelectorAll('.tabs-content');
+const tabsBtns = document.querySelectorAll('.tabs-btn');
+const tabsContents = document.querySelectorAll('.tabs-content');
 
-tabBtns.forEach(tabBtn => {
-    tabBtn.addEventListener('click', () => {
-        const target = tabBtn.getAttribute('data-tabs-target');
+tabsBtns.forEach(tabsBtn => {
+    tabsBtn.addEventListener('click', () => {
+        const group = tabsBtn.dataset.tabsGroup;
+        const target = tabsBtn.dataset.tabsTarget;
 
-        tabBtns.forEach(tabBtn => tabBtn.classList.remove('tabs-btn--active'));
-        tabContents.forEach(tabContent => tabContent.classList.remove('tabs-content--active'));
+        document
+            .querySelectorAll(`.tabs-btn[data-tabs-group="${group}"]`)
+            .forEach(tabsBtn => tabsBtn.classList.remove('tabs-btn--active'));
 
-        tabBtn.classList.add('tabs-btn--active');
-        document.querySelectorAll(`.tabs-content[data-tabs-content="${target}"]`).forEach(tabContent => {
-            tabContent.classList.add('tabs-content--active');
-        });
+        document
+            .querySelectorAll(`.tabs-content[data-tabs-group="${group}"]`)
+            .forEach(tabsContent => tabsContent.classList.remove('tabs-content--active'));
+
+        tabsBtn.classList.add('tabs-btn--active');
+        document
+            .querySelectorAll(`.tabs-content[data-tabs-group="${group}"][data-tabs-content="${target}"]`)
+            .forEach(tabsContent => tabsContent.classList.add('tabs-content--active'));
     });
 });
