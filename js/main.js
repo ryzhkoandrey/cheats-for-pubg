@@ -82,3 +82,17 @@ tabsBtns.forEach(tabsBtn => {
             .forEach(tabsContent => tabsContent.classList.add('tabs-content--active'));
     });
 });
+
+// =============== FUNCTIONALITY__GALLERY ===============
+
+// swiper
+
+const functionalitySwiper = new Swiper('.functionality__gallery-slider > .swiper', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+
+    navigation: {
+        nextEl: ".functionality__gallery-btn--next",
+        prevEl: ".functionality__gallery-btn--prev",
+    },
+});
