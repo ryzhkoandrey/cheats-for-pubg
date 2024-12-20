@@ -7,35 +7,35 @@ document.querySelectorAll('.navbar__language').forEach((languageSelector) => {
     LanguageToggler.addEventListener('click', (event) => {
         event.preventDefault();
 
-        // Check if the current languageSelector is active
+        // Проверяем, активен ли текущий languageSelector
         const isActive = languageSelector.classList.contains('navbar__language--active');
 
-        // Reset all other open blocks
+        // Сбрасываем все другие открытые блоки
         document.querySelectorAll('.navbar__language').forEach((otherSelector) => {
             const otherList = otherSelector.querySelector('.navbar__language-list');
             otherSelector.classList.remove('navbar__language--active');
-            otherList.removeAttribute('style'); // Remove height
+            otherList.removeAttribute('style'); // Убираем высоту
         });
 
-        // If the current one was inactive, activate it
+        // Если текущий был неактивен, активируем его
         if (!isActive) {
             languageSelector.classList.add('navbar__language--active');
-            languageList.style.maxHeight = languageList.scrollHeight + 'px'; // Set height
+            languageList.style.maxHeight = languageList.scrollHeight + 'px'; // Устанавливаем высоту
         } else {
-            // If it was active, deactivate it
+            // Если был активен, деактивируем
             languageSelector.classList.remove('navbar__language--active');
-            languageList.removeAttribute('style'); // Remove height
+            languageList.removeAttribute('style'); // Убираем высоту
         }
     });
 });
 
-// Close all lists when clicking outside the blocks
+// Закрываем все списки при клике вне блоков
 document.addEventListener('click', (event) => {
     document.querySelectorAll('.navbar__language').forEach((languageSelector) => {
         if (!languageSelector.contains(event.target)) {
             const languageList = languageSelector.querySelector('.navbar__language-list');
             languageSelector.classList.remove('navbar__language--active');
-            languageList.removeAttribute('style'); // Remove height
+            languageList.removeAttribute('style'); // Убираем высоту
         }
     });
 });
@@ -50,14 +50,17 @@ tabsBtns.forEach(tabsBtn => {
         const group = tabsBtn.dataset.tabsGroup;
         const target = tabsBtn.dataset.tabsTarget;
 
+        // Убираем активный класс у кнопок текущей группы
         document
             .querySelectorAll(`.tabs-btn[data-tabs-group="${group}"]`)
             .forEach(tabsBtn => tabsBtn.classList.remove('tabs-btn--active'));
 
+        // Убираем активный класс у контента текущей группы
         document
             .querySelectorAll(`.tabs-content[data-tabs-group="${group}"]`)
             .forEach(tabsContent => tabsContent.classList.remove('tabs-content--active'));
 
+        // Активируем текущую кнопку и контент
         tabsBtn.classList.add('tabs-btn--active');
         document
             .querySelectorAll(`.tabs-content[data-tabs-group="${group}"][data-tabs-content="${target}"]`)
