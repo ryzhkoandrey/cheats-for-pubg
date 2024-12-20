@@ -107,8 +107,33 @@
     // gallery
 
     &__gallery {
+        padding-top: 70px;
         grid-row: 1 / 3;
     }
+
+    &__gallery-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__gallery-image {}
+
+    &__gallery-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 33px;
+    }
+
+    &__gallery-btn {
+
+        &--prev {}
+
+        &--next {}
+    }
+
+    &__gallery-btn-icon {}
 
     // tabs
 
