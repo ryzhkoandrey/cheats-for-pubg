@@ -85,14 +85,38 @@ tabsBtns.forEach(tabsBtn => {
 
 // =============== FUNCTIONALITY__GALLERY ===============
 
-// swiper
+// swiper-windows
 
-const functionalitySwiper = new Swiper('.functionality__gallery-slider > .swiper', {
+const swiperWindows = new Swiper('#swiper-windows', {
     slidesPerView: 1,
     spaceBetween: 0,
 
     navigation: {
-        nextEl: ".functionality__gallery-btn--next",
-        prevEl: ".functionality__gallery-btn--prev",
+        nextEl: "#swiper-windows-next",
+        prevEl: "#swiper-windows-prev",
+    },
+});
+
+// swiper-android
+
+const swiperAndroid = new Swiper('#swiper-android', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+
+    navigation: {
+        nextEl: "#swiper-android-next",
+        prevEl: "#swiper-android-prev",
+    },
+});
+
+// swiper-ios
+
+const swiperIos = new Swiper('#swiper-ios', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+
+    navigation: {
+        nextEl: "#swiper-ios-next",
+        prevEl: "#swiper-ios-prev",
     },
 });
