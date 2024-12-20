@@ -40,6 +40,21 @@ document.addEventListener('click', (event) => {
     });
 });
 
+// =============== FANCYBOX ===============
+
+// Решение проблемы: 
+// смещение header при открытии Fancybox
+Fancybox.bind("[data-fancybox]", {
+    on: {
+        init: () => {
+            document.querySelector(".header").style.marginRight = `${window.innerWidth - document.documentElement.clientWidth}px`;
+        },
+        destroy: () => {
+            document.querySelector(".header").style.marginRight = "";
+        }
+    }
+});
+
 // =============== TABS ===============
 
 const tabsBtns = document.querySelectorAll('.tabs-btn');
