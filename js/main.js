@@ -7,35 +7,37 @@ document.querySelectorAll('.navbar__language').forEach((languageSelector) => {
     LanguageToggler.addEventListener('click', (event) => {
         event.preventDefault();
 
-        // Проверяем, активен ли текущий languageSelector
+        // Check if the current languageSelector is active
         const isActive = languageSelector.classList.contains('navbar__language--active');
 
-        // Сбрасываем все другие открытые блоки
+        // Reset all other open blocks
         document.querySelectorAll('.navbar__language').forEach((otherSelector) => {
             const otherList = otherSelector.querySelector('.navbar__language-list');
             otherSelector.classList.remove('navbar__language--active');
-            otherList.removeAttribute('style'); // Убираем высоту
+            otherList.removeAttribute('style'); // Removing the height
         });
 
-        // Если текущий был неактивен, активируем его
+        // If the current one was inactive, activate it
         if (!isActive) {
             languageSelector.classList.add('navbar__language--active');
-            languageList.style.maxHeight = languageList.scrollHeight + 'px'; // Устанавливаем высоту
+            languageList.style.maxHeight = languageList.scrollHeight + 'px'; // Setting the height
         } else {
-            // Если был активен, деактивируем
+            // If it was active, deactivate it
             languageSelector.classList.remove('navbar__language--active');
-            languageList.removeAttribute('style'); // Убираем высоту
+            languageList.removeAttribute('style'); // Removing the height
         }
     });
 });
 
-// Закрываем все списки при клике вне блоков
+// Close all lists when clicking outside the blocks
 document.addEventListener('click', (event) => {
     document.querySelectorAll('.navbar__language').forEach((languageSelector) => {
         if (!languageSelector.contains(event.target)) {
             const languageList = languageSelector.querySelector('.navbar__language-list');
             languageSelector.classList.remove('navbar__language--active');
-            languageList.removeAttribute('style'); // Убираем высоту
+            languageList.removeAttribute('style'); // Removing the height
         }
     });
 });
+
+// =============== TABS ===============
