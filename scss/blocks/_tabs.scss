@@ -48,7 +48,23 @@
         &--active {
             box-shadow: 0 15px 25px 0 rgba(0, 163, 255, 0.3);
             background: linear-gradient(128deg, #0aa6fe 0%, #05ffff 100%);
+            cursor: default;
             pointer-events: none;
+
+            &:hover {
+                box-shadow: 0 15px 25px 0 rgba(0, 163, 255, 0.3);
+
+                .tabs__btn-icon {
+
+                    path {
+                        fill: #fff;
+                    }
+                }
+
+                .tabs__btn-text {
+                    color: #fff;
+                }
+            }
 
             .tabs__btn-icon {
 
