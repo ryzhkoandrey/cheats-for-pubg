@@ -42,7 +42,7 @@ document.addEventListener('click', (event) => {
 
 // =============== TABS ===============
 
-const tabBtns = document.querySelectorAll('.tabs__btn');
+const tabBtns = document.querySelectorAll('.tabs-btn');
 const tabContents = document.querySelectorAll('.tabs-content');
 
 tabBtns.forEach(tabBtn => {
@@ -50,11 +50,11 @@ tabBtns.forEach(tabBtn => {
         const target = tabBtn.getAttribute('data-tab-target');
 
         // Remove the active class from all tabsBtns and tabContents
-        tabBtns.forEach(tabBtn => tabBtn.classList.remove('tabs__btn--active'));
+        tabBtns.forEach(tabBtn => tabBtn.classList.remove('tabs-btn--active'));
         tabContents.forEach(tabContent => tabContent.classList.remove('tabs-content--active'));
 
         // Add an active class for the selected tabBtn and tabContents
-        tabBtn.classList.add('tabs__btn--active');
+        tabBtn.classList.add('tabs-btn--active');
         document.querySelectorAll(`.tabs-content[data-tab-content="${target}"]`).forEach(tabContent => {
             tabContent.classList.add('tabs-content--active');
         });
