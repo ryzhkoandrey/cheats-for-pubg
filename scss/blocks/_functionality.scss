@@ -27,9 +27,6 @@
 
     &__gallery {
         grid-row: span 2;
-    }
-
-    &__gallery-inner {
         position: relative;
         padding-top: 70px;
     }
@@ -131,8 +128,6 @@
     // info
 
     &__info {}
-
-    &__info-inner {}
 
     &__list {
         margin-bottom: 69px;
