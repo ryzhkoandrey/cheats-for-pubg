@@ -43,7 +43,7 @@
     }
 
     &__slide {
-        padding-top: 45px;
+        padding: 45px 0 61px;
         display: flex;
         justify-content: center;
     }
@@ -59,6 +59,26 @@
         align-items: center;
         gap: 20px;
         background: #fff;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 47px;
+            height: 39px;
+            background: url('../img/quotes.svg');
+        }
+
+        &::before {
+            top: -24px;
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
+            bottom: -24px;
+            transform: rotate(180deg);
+        }
     }
 
     &__slide-photo {
@@ -71,9 +91,20 @@
     }
 
     &__slide-name {
+        position: relative;
         font-weight: 600;
         font-size: 18px;
         color: #2e3a59;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            right: -38px;
+            width: 29px;
+            height: 11px;
+            background: url('../img/decor.svg');
+        }
     }
 
     &__slide-text {
