@@ -138,6 +138,7 @@ const swiperIos = new Swiper('#swiper-ios', {
 const swiperReviews = new Swiper('#swiper-reviews', {
     slidesPerView: 1,
     spaceBetween: 0,
+    autoHeight: true,
 
     navigation: {
         prevEl: "#swiper-reviews-prev",
