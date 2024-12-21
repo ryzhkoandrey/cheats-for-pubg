@@ -1,0 +1,60 @@
+.tariffs {
+    padding-top: 106px;
+
+    &__heading {
+        margin-bottom: 64px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__title {
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 8px;
+            background: #fb8500;
+            transform: rotate(-45deg);
+        }
+
+        &::before {
+            top: -30px;
+            left: -30px;
+        }
+
+        &::after {
+            bottom: -5px;
+            right: -30px;
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__cards {}
+
+    // card
+
+    &__card {}
+
+    &__card-title {}
+
+    &__card-time {}
+
+    &__card-list {}
+
+    &__card-item {}
+
+    &__card-item--not {}
+
+    &__card-price {}
+
+    &__card-btn {}
+}
