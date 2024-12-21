@@ -152,11 +152,11 @@
     &__controls-btn-icon {
 
         &--prev {
-            transform: rotate(135deg);
+            transform: translate(4px, -3px) rotate(135deg);
         }
 
         &--next {
-            transform: rotate(-45deg);
+            transform: translate(2px, -3px) rotate(-45deg);
         }
     }
 }
