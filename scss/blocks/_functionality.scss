@@ -27,7 +27,6 @@
 
     &__gallery {
         grid-row: span 2;
-        position: relative;
         padding-top: 70px;
     }
 
@@ -47,11 +46,8 @@
     }
 
     &__gallery-controls {
-        position: absolute;
-        bottom: -24px;
-        left: 50%;
-        z-index: 2;
-        transform: translateX(-95px);
+        transform: translateX(-16px);
+        margin-top: -8px;
         display: flex;
         justify-content: center;
         align-items: center;
