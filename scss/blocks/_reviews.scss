@@ -117,7 +117,15 @@
 
     &__controls {
         position: absolute;
+        top: 114px;
         left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        max-width: 940px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &__controls-btn {
