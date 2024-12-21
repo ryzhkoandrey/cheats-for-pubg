@@ -1,4 +1,5 @@
 .tariffs {
+    margin-bottom: 134px;
     padding-top: 106px;
 
     &__heading {
@@ -32,25 +33,74 @@
     }
 
     &__tabs {
+        margin-bottom: 60px;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 16px;
     }
 
-    &__cards {}
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 36px;
+    }
 
     // card
 
-    &__card {}
+    &__card {
+        border-radius: 5px 55px;
+        box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.05);
+        background: #fff;
+    }
 
-    &__card-title {}
+    &__card-title {
+        border-radius: 5px 55px 0 55px;
+        margin-bottom: 36px;
+        padding: 15px 30px;
+        min-height: 71px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: 21px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.05);
+        background: linear-gradient(163deg, #05ffff 0%, #0aa6fe 100%);
 
-    &__card-time {}
+        &--pink {
+            background: linear-gradient(79deg, #dda6ff 0%, #d828f4 100%);
+        }
 
-    &__card-list {}
+        &--red {
+            background: linear-gradient(162deg, #ff9898 0%, #ff1f00 100%);
+        }
+    }
 
-    &__card-item {}
+    &__card-period {
+        margin-bottom: 34px;
+        font-weight: 600;
+        font-size: 30px;
+        text-align: center;
+        color: #2e3a59;
+    }
+
+    &__card-list {
+        margin-bottom: 26px;
+        padding: 0 50px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+    }
+
+    &__card-item {
+        padding-left: 35px;
+        font-weight: 400;
+        font-size: 18px;
+        color: #2e3a59;
+    }
 
     &__card-item--not {}
 
