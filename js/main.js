@@ -1,4 +1,6 @@
-// =============== NAVBAR__LANGUAGE ===============
+// ===============================================
+// =============== NAVBAR LANGUAGE ===============
+// ===============================================
 
 document.querySelectorAll('.navbar__language').forEach((languageSelector) => {
     const LanguageToggler = languageSelector.querySelector('.navbar__language-toggler');
@@ -40,7 +42,9 @@ document.addEventListener('click', (event) => {
     });
 });
 
+// ========================================
 // =============== FANCYBOX ===============
+// ========================================
 
 // Решение проблемы: 
 // смещение header при открытии Fancybox
@@ -55,7 +59,9 @@ Fancybox.bind("[data-fancybox]", {
     }
 });
 
+// ====================================
 // =============== TABS ===============
+// ====================================
 
 const tabsBtns = document.querySelectorAll('.tabs-btn');
 const tabsContents = document.querySelectorAll('.tabs-content');
@@ -83,7 +89,9 @@ tabsBtns.forEach(tabsBtn => {
     });
 });
 
-// =============== FUNCTIONALITY__GALLERY ===============
+// =====================================================
+// =============== FUNCTIONALITY GALLERY ===============
+// =====================================================
 
 // swiper-windows
 
@@ -92,8 +100,8 @@ const swiperWindows = new Swiper('#swiper-windows', {
     spaceBetween: 0,
 
     navigation: {
-        nextEl: "#swiper-windows-next",
         prevEl: "#swiper-windows-prev",
+        nextEl: "#swiper-windows-next",
     },
 });
 
@@ -104,8 +112,8 @@ const swiperAndroid = new Swiper('#swiper-android', {
     spaceBetween: 0,
 
     navigation: {
-        nextEl: "#swiper-android-next",
         prevEl: "#swiper-android-prev",
+        nextEl: "#swiper-android-next",
     },
 });
 
@@ -116,7 +124,23 @@ const swiperIos = new Swiper('#swiper-ios', {
     spaceBetween: 0,
 
     navigation: {
-        nextEl: "#swiper-ios-next",
         prevEl: "#swiper-ios-prev",
+        nextEl: "#swiper-ios-next",
+    },
+});
+
+// =======================================
+// =============== REVIEWS ===============
+// =======================================
+
+// swiper
+
+const swiperReviews = new Swiper('#swiper-reviews', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+
+    navigation: {
+        prevEl: "#swiper-reviews-prev",
+        nextEl: "#swiper-reviews-next",
     },
 });
