@@ -1,5 +1,5 @@
 .reviews {
-    padding-top: 150px;
+    padding-top: 167px;
     min-height: 601px;
     background: url('../img/reviews-bg.jpg') no-repeat top center / cover;
 
@@ -7,16 +7,35 @@
         background-image: url('../img/reviews-bg@2x.jpg');
     }
 
-    &__header {
+    &__heading {
         display: flex;
         justify-content: center;
     }
 
     &__title {
+        position: relative;
         color: #fff;
-    }
 
-    &__body {}
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 8px;
+            background: #fb8500;
+            transform: rotate(-45deg);
+        }
+
+        &::before {
+            top: -5px;
+            left: -27px;
+        }
+
+        &::after {
+            top: 5px;
+            left: -15px;
+        }
+    }
 
     &__slider {}
 
