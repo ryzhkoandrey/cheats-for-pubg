@@ -100,11 +100,18 @@
         font-weight: 400;
         font-size: 18px;
         color: #2e3a59;
+        background: url('../img/check.svg') no-repeat top left;
+
+        &--not {
+            background-image: url('../img/cross.svg');
+        }
     }
 
-    &__card-item--not {}
 
-    &__card-price {}
+
+    &__card-price {
+        margin-bottom: 21px;
+    }
 
     &__card-btn {}
 }
