@@ -72,8 +72,8 @@
         &::after {
             content: '';
             position: absolute;
-            top: 36px;
-            right: 46px;
+            top: 38px;
+            right: 48px;
             width: 23px;
             height: 23px;
             background: url('../img/plus.svg');
@@ -87,9 +87,30 @@
         transition: all .2s;
     }
 
-    &__answer-inner {}
+    &__answer-inner {
+        position: relative;
+        padding: 6px 67px 37px 58px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
 
-    &__answer-text {}
+        &::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            bottom: 38px;
+            left: 37px;
+            width: 2px;
+            background: linear-gradient(174deg, #0aa6fe 0%, #05ffff 100%);
+        }
+    }
+
+    &__answer-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #727272;
+    }
 
     &__footer {}
 
