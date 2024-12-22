@@ -16,17 +16,17 @@ document.querySelectorAll('.navbar__language').forEach((languageSelector) => {
         document.querySelectorAll('.navbar__language').forEach((otherSelector) => {
             const otherList = otherSelector.querySelector('.navbar__language-list');
             otherSelector.classList.remove('navbar__language--active');
-            otherList.removeAttribute('style'); // Убираем высоту
+            otherList.removeAttribute('style');
         });
 
         // Если текущий был неактивен, активируем его
         if (!isActive) {
             languageSelector.classList.add('navbar__language--active');
-            languageList.style.maxHeight = languageList.scrollHeight + 'px'; // Устанавливаем высоту
+            languageList.style.maxHeight = languageList.scrollHeight + 'px';
         } else {
             // Если был активен, деактивируем
             languageSelector.classList.remove('navbar__language--active');
-            languageList.removeAttribute('style'); // Убираем высоту
+            languageList.removeAttribute('style');
         }
     });
 });
@@ -37,7 +37,7 @@ document.addEventListener('click', (event) => {
         if (!languageSelector.contains(event.target)) {
             const languageList = languageSelector.querySelector('.navbar__language-list');
             languageSelector.classList.remove('navbar__language--active');
-            languageList.removeAttribute('style'); // Убираем высоту
+            languageList.removeAttribute('style');
         }
     });
 });
@@ -152,6 +152,18 @@ const swiperReviews = new Swiper('#swiper-reviews', {
 
 const faqTogglers = document.querySelectorAll('.faq__question-toggler');
 
+// Разворачиваем все открытые вопросы при загрузке страницы
+faqTogglers.forEach(function (toggler) {
+
+    const isOpen = toggler.parentElement.classList.contains('faq__question--active');
+    const answer = toggler.nextElementSibling;
+
+    if (isOpen) {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+});
+
+// Разворачиваем / сворачиваем вопрос по клику
 faqTogglers.forEach(function (toggler) {
     toggler.addEventListener('click', function () {
 
