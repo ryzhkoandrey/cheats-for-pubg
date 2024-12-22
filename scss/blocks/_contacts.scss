@@ -1,28 +1,102 @@
 .contacts {
+    padding-bottom: 347px;
+    background: url('../img/contacts-bg.jpg') no-repeat top 218px center / cover;
 
-    &__heading {}
+    @media (min-resolution: 192dpi) {
+        background-image: url('../img/contacts-bg@2x.jpg');
+    }
 
-    &__title {}
+    &__heading {
+        margin-bottom: 90px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__title {
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 8px;
+            background: #fb8500;
+            transform: rotate(-45deg);
+        }
+
+        &::before {
+            top: 0;
+            left: -27px;
+        }
+
+        &::after {
+            top: 10px;
+            left: -15px;
+        }
+    }
 
     // form
 
-    &__form {}
+    &__form {
+        border-radius: 5px;
+        margin-left: auto;
+        padding: 50px 32px 33px 62px;
+        max-width: 644px;
+        box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.03);
+        background: #fff;
+    }
 
-    &__form-header {}
+    &__form-header {
+        margin-bottom: 31px;
+    }
 
-    &__form-title {}
+    &__form-title {
+        font-weight: 600;
+        font-size: 18px;
+        color: #2e3a59;
+    }
 
-    &__form-body {}
+    &__form-body {
+        margin-bottom: 44px;
+    }
 
-    &__form-row {}
+    &__form-row {
+        margin-bottom: 42px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
 
-    &__form-input {}
+    &__form-input {
+        padding: 2px 15px 17px 28px;
+        width: 100%;
+        font-weight: 400;
+        font-size: 14px;
+        color: #2e3a59;
+        border-bottom: 1px solid rgba(165, 170, 183, .5);
 
-    &__form-input--name {}
+        &::placeholder {
+            color: rgba(46, 58, 89, 0.43);
+        }
 
-    &__form-input--email {}
+        &--name {
+            background: url('../img/user-form.svg') no-repeat top left;
+        }
 
-    &__form-input-comment {}
+        &--email {
+            background: url('../img/email.svg') no-repeat top 3px left;
+        }
 
-    &__form-footer {}
+        &--comment {
+            height: 103px;
+            line-height: 1.6;
+            background: url('../img/comment.svg') no-repeat top 5px left;
+        }
+    }
+
+    &__form-footer {
+        display: flex;
+        justify-content: center;
+    }
 }
