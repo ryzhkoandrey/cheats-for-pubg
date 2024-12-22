@@ -1,7 +1,8 @@
 .contacts {
+    position: relative;
     overflow: hidden;
     padding-bottom: 347px;
-    background: url('../img/contacts-bg.jpg') no-repeat top 218px center / cover;
+    background: url('../img/contacts-bg.jpg') no-repeat top center / cover;
 
     @media (min-resolution: 192dpi) {
         background-image: url('../img/contacts-bg@2x.jpg');
