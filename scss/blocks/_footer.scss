@@ -1,1 +1,19 @@
-.footer {}
+.footer {
+    position: relative;
+    z-index: 2;
+
+    &__navbar {}
+
+    &__copyright {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+        padding-top: 134px;
+        font-weight: 400;
+        font-size: 17px;
+        text-align: center;
+        color: #fff;
+    }
+}
