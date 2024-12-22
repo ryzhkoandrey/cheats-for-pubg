@@ -1,3 +1,32 @@
+// ====================================
+// =============== MENU ===============
+// ====================================
+
+// Скролл я якорю
+
+const scrollLinks = document.querySelectorAll('.navbar__menu-link');
+
+scrollLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            // Получаем индивидуальный отступ из data-offset (по умолчанию 0)
+            const offset = parseInt(targetElement.getAttribute('data-offset')) || 0;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth',
+            });
+        }
+    });
+});
+
 // ===============================================
 // =============== NAVBAR LANGUAGE ===============
 // ===============================================
