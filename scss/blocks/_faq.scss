@@ -1,4 +1,5 @@
 .faq {
+    margin-bottom: 100px;
 
     &__heading {
         margin-bottom: 88px;
@@ -32,7 +33,7 @@
     }
 
     &__questions {
-        margin: 0 auto;
+        margin: 0 auto 45px;
         max-width: 946px;
         display: flex;
         flex-direction: column;
@@ -48,6 +49,10 @@
         background: #fff;
         transition: all .2s;
 
+        &:hover {
+            box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.06);
+        }
+
         &--active {
 
             .faq__question-toggler {
@@ -55,10 +60,6 @@
                 &::after {
                     transform: rotate(45deg);
                 }
-            }
-
-            .faq__answer {
-                max-height: none;
             }
 
             &:hover {
@@ -137,7 +138,19 @@
 
     // footer
 
-    &__footer {}
+    &__footer {
+        display: flex;
+        justify-content: center;
+    }
 
-    &__link {}
+    &__link {
+        font-weight: 500;
+        font-size: 18px;
+        text-decoration: underline;
+        color: #0aa6fe;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }

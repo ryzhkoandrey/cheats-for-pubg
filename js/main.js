@@ -145,3 +145,23 @@ const swiperReviews = new Swiper('#swiper-reviews', {
         nextEl: "#swiper-reviews-next",
     },
 });
+
+// ===================================
+// =============== FAQ ===============
+// ===================================
+
+const faqTogglers = document.querySelectorAll('.faq__question-toggler');
+
+faqTogglers.forEach(function (toggler) {
+    toggler.addEventListener('click', function () {
+
+        const isOpen = toggler.parentElement.classList.toggle('faq__question--active');
+        const answer = toggler.nextElementSibling;
+
+        if (isOpen) {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+            answer.removeAttribute('style');
+        }
+    });
+});
