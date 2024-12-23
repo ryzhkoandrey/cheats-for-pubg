@@ -7,6 +7,10 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto 1fr;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
     }
 
     // tabs
@@ -20,6 +24,11 @@
         justify-content: center;
         align-items: center;
         gap: 16px;
+
+        @include mobile {
+            position: static;
+            gap: 10px;
+        }
     }
 
     // gallery
@@ -27,6 +36,10 @@
     &__gallery {
         grid-row: span 2;
         padding-top: 70px;
+
+        @include mobile {
+            grid-row: auto;
+        }
     }
 
     &__gallery-slider {
@@ -74,6 +87,10 @@
 
     &__heading {
         margin-bottom: 50px;
+
+        @include mobile {
+            order: -1;
+        }
     }
 
     &__heading-inner {
