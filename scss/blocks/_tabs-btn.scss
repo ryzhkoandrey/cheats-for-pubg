@@ -8,6 +8,11 @@
     box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.03);
     background: #fff;
 
+    @include mobile {
+        height: 54px;
+        gap: 12px;
+    }
+
     &:hover {
         box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.07);
 
@@ -25,17 +30,58 @@
 
     &--windows {
         width: 206px;
+
+        @include mobile {
+            width: 123px;
+        }
+
+        .tabs-btn__icon {
+            width: 33px;
+            height: 29px;
+
+            @include mobile {
+                width: 23px;
+                height: 21px;
+            }
+        }
     }
 
     &--android {
         width: 195px;
+
+        @include mobile {
+            width: 116px;
+        }
+
+        .tabs-btn__icon {
+            width: 33px;
+            height: 39px;
+
+            @include mobile {
+                width: 18px;
+                height: 21px;
+            }
+        }
     }
 
     &--ios {
         width: 135px;
 
+        @include mobile {
+            gap: 9px;
+            width: 81px;
+        }
+
         .tabs-btn__icon {
             transform: translateY(-4px);
+            width: 30px;
+            height: 40px;
+
+            @include mobile {
+                transform: translateY(-2px);
+                width: 16px;
+                height: 21px;
+            }
         }
     }
 
@@ -84,5 +130,9 @@
         font-size: 18px;
         color: #aaa;
         transition: all .2s;
+
+        @include mobile {
+            font-size: 12px;
+        }
     }
 }

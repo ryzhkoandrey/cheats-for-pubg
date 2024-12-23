@@ -28,6 +28,7 @@
         @include mobile {
             position: static;
             gap: 10px;
+            margin-bottom: 100px;
         }
     }
 
@@ -90,6 +91,7 @@
 
         @include mobile {
             order: -1;
+            margin-bottom: 28px;
         }
     }
 
