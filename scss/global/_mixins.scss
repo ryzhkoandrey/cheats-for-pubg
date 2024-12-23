@@ -18,3 +18,10 @@
         @content;
     }
 }
+
+@mixin mobile-small() {
+
+    @media (max-width: 375px) {
+        @content;
+    }
+}

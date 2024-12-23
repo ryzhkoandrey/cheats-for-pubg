@@ -35,6 +35,10 @@
             width: 123px;
         }
 
+        @include mobile-small {
+            width: 100%;
+        }
+
         .tabs-btn__icon {
             width: 33px;
             height: 29px;
@@ -51,6 +55,10 @@
 
         @include mobile {
             width: 116px;
+        }
+
+        @include mobile-small {
+            width: 100%;
         }
 
         .tabs-btn__icon {
@@ -70,6 +78,10 @@
         @include mobile {
             gap: 9px;
             width: 81px;
+        }
+
+        @include mobile-small {
+            width: 100%;
         }
 
         .tabs-btn__icon {

@@ -29,7 +29,10 @@
             position: static;
             gap: 9px;
             margin-bottom: -40px;
-            flex-wrap: wrap;
+        }
+
+        @include mobile-small {
+            flex-direction: column;
         }
     }
 
@@ -40,6 +43,7 @@
         padding-top: 90px;
 
         @include mobile {
+            padding-top: 78px;
             grid-row: auto;
         }
     }
@@ -50,8 +54,12 @@
         width: 500px;
 
         @include mobile {
-            width: 315px;
+            width: 320px;
             transform: none;
+        }
+
+        @include mobile-small {
+            width: 280px;
         }
     }
 
