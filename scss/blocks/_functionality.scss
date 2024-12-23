@@ -1,5 +1,9 @@
 .functionality {
 
+    @include mobile {
+        margin-bottom: 5px;
+    }
+
     // inner
 
     &__inner {
@@ -43,6 +47,7 @@
         padding-top: 90px;
 
         @include mobile {
+            margin-bottom: 31px;
             padding-top: 78px;
             grid-row: auto;
         }
@@ -84,6 +89,8 @@
 
         @include mobile {
             transform: none;
+            margin-top: -22px;
+            gap: 29px;
         }
     }
 
@@ -101,6 +108,11 @@
         width: 61px;
         height: 32px;
 
+        @include mobile {
+            width: 54px;
+            height: 28px;
+        }
+
         path {
             fill: #0aa6fe;
         }
@@ -109,7 +121,7 @@
     // heading
 
     &__heading {
-        margin-bottom: 50px;
+        margin-bottom: 53px;
 
         @include mobile {
             order: -1;
@@ -180,20 +192,62 @@
 
     &__info {}
 
+    &__info-title {
+        display: none;
+
+        @include mobile {
+            margin-bottom: 31px;
+            display: block;
+            font-weight: 800;
+            font-size: 16px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #2e3a59;
+        }
+    }
+
     &__list {
         margin-bottom: 69px;
         padding-left: 67px;
         display: flex;
         flex-direction: column;
         gap: 42px;
+
+        @include mobile {
+            margin: 0 auto 35px;
+            padding-left: 0;
+            max-width: 302px;
+            gap: 25px;
+        }
     }
 
     &__item {
+        position: relative;
         padding-left: 27px;
         font-weight: 400;
         font-size: 18px;
         color: #2e3a59;
-        background: url('../img/rhombus.svg') no-repeat left top 4px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 0;
+            width: 15px;
+            height: 15px;
+            background: url('../img/rhombus.svg') no-repeat center / cover;
+
+            @include mobile {
+                top: 1px;
+                left: 1px;
+                width: 13px;
+                height: 13px;
+            }
+        }
+
+        @include mobile {
+            font-size: 12px;
+        }
     }
 
     &__item-strong {
@@ -211,6 +265,10 @@
         gap: 19px;
         box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.04);
         background: #fff;
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &__note-icon {}
@@ -226,5 +284,17 @@
         display: flex;
         align-items: center;
         gap: 23px;
+
+        @include mobile {
+            padding-left: 0;
+            justify-content: center;
+        }
+    }
+
+    &__btn-video {
+
+        @include mobile {
+            display: none;
+        }
     }
 }
