@@ -6,9 +6,21 @@
 
     @include mobile {
         justify-content: space-between;
-        align-items: center;
         gap: 15px;
     }
+
+    // menu-toggler
+
+    &__menu-toggler {
+        display: none;
+
+        @include mobile {
+            transform: translateY(12px);
+            display: block;
+        }
+    }
+
+    &__menu-toggler-icon {}
 
     // logo
 
@@ -16,6 +28,7 @@
         margin: 12px 0 0 -9px;
 
         @include mobile {
+            transform: translateY(5px);
             margin: 0;
             width: 150px;
         }

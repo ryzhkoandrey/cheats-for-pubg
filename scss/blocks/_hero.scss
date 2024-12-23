@@ -2,10 +2,20 @@
     margin-bottom: -6px;
     padding-top: 190px;
     min-height: 1027px;
-    background: url('../img/hero-bg.jpg') no-repeat bottom center / cover;
+    background: #4d97f4 url('../img/hero-bg.jpg') no-repeat bottom center / cover;
 
     @media (min-resolution: 192dpi) {
         background-image: url('../img/hero-bg@2x.jpg');
+    }
+
+    @include mobile {
+        margin-bottom: 25px;
+        min-height: 619px;
+        background-image: url('../img/hero-bg-mobile.jpg');
+    }
+
+    @media (min-resolution: 192dpi) {
+        background-image: url('../img/hero-bg-mobile@2x.jpg');
     }
 
     &__inner {
@@ -31,6 +41,11 @@
         font-size: 55px;
         text-transform: uppercase;
         color: #fff;
+
+        @include mobile {
+            font-size: 30px;
+            text-align: center;
+        }
 
         &::before,
         &::after {
@@ -77,5 +92,9 @@
         display: flex;
         align-items: center;
         gap: 34px;
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
 }
