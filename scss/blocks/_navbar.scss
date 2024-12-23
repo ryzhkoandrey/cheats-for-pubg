@@ -12,11 +12,15 @@
 
     &__logo-image {}
 
+    // menu
+
     &__menu {
         margin-top: 20px;
-    }
 
-    // menu
+        @include mobile {
+            display: none;
+        }
+    }
 
     &__menu-list {
         display: flex;
@@ -162,6 +166,10 @@
         align-items: center;
         background: linear-gradient(157deg, #ff9b05 0%, #ff8f3f 100%);
         box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+
+        @include mobile {
+            display: none;
+        }
 
         &:hover {
             box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.15);
