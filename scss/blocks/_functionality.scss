@@ -28,7 +28,7 @@
         @include mobile {
             position: static;
             gap: 9px;
-            margin-bottom: 40px;
+            margin-bottom: -40px;
             flex-wrap: wrap;
         }
     }
@@ -46,7 +46,11 @@
 
     &__gallery-slider {
         margin: 0 auto;
-        width: 500px;
+        width: 450px;
+
+        @include mobile {
+            width: 265px;
+        }
     }
 
     &__gallery-slide {
@@ -55,9 +59,7 @@
         align-items: center;
     }
 
-    &__gallery-image {
-        transform: translateX(-42px);
-    }
+    &__gallery-image {}
 
     &__gallery-controls {
         transform: translateX(-16px);
