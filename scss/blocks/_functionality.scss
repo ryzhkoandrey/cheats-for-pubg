@@ -27,8 +27,9 @@
 
         @include mobile {
             position: static;
-            gap: 10px;
-            margin-bottom: 100px;
+            gap: 9px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
         }
     }
 
