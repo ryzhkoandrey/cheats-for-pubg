@@ -81,6 +81,10 @@
         justify-content: center;
         align-items: center;
         gap: 33px;
+
+        @include mobile {
+            transform: none;
+        }
     }
 
     &__gallery-btn {

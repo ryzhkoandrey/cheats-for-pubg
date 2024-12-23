@@ -159,5 +159,9 @@
         @include mobile {
             display: flex;
         }
+
+        @include mobile-small {
+            background: linear-gradient(90deg, #4a91f4 0%, #6ac3fa 100%);
+        }
     }
 }
