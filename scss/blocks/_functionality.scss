@@ -111,16 +111,31 @@
             height: 8px;
             background: #fb8500;
             transform: rotate(-45deg);
+
+            @include mobile {
+                width: 22px;
+                height: 4px;
+            }
         }
 
         &::before {
             top: 0;
             left: -22px;
+
+            @include mobile {
+                top: -2px;
+                left: -10px;
+            }
         }
 
         &::after {
             bottom: 0;
             right: -27px;
+
+            @include mobile {
+                bottom: -2px;
+                right: -20px;
+            }
         }
     }
 
