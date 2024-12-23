@@ -131,6 +131,10 @@
         line-height: 1.8;
         text-align: center;
         color: #828282;
+
+        @include mobile {
+            font-size: 12px;
+        }
     }
 
     // info
