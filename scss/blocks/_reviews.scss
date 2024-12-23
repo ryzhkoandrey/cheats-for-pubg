@@ -14,8 +14,11 @@
     }
 
     &__title {
-        position: relative;
         color: #fff;
+    }
+
+    &__title-word {
+        position: relative;
 
         &::before,
         &::after {
