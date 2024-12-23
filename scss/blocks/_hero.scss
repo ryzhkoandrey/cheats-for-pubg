@@ -10,7 +10,7 @@
 
     @include mobile {
         margin-bottom: 25px;
-        padding-top: 97px;
+        padding-top: 94px;
         min-height: 619px;
         background-image: url('../img/hero-bg-mobile.jpg');
     }
@@ -26,6 +26,10 @@
     &__header {
         margin-bottom: 25px;
 
+        @include mobile {
+            margin-bottom: 15px;
+        }
+
         &::after {
             content: '';
             display: block;
@@ -33,6 +37,11 @@
             width: 110px;
             height: 5px;
             background: linear-gradient(174deg, #ffac8b 0%, #ff4900 100%);
+
+            @include mobile {
+                margin: 14px auto 0;
+                height: 3px;
+            }
         }
     }
 
@@ -56,23 +65,44 @@
             height: 8px;
             background: #fb8500;
             transform: rotate(-45deg);
+
+            @include mobile {
+                width: 22px;
+                height: 4px;
+            }
         }
 
         &::before {
             top: 5px;
             left: -27px;
+
+            @include mobile {
+                top: 2px;
+                left: 8px;
+            }
         }
 
         &::after {
             top: 18px;
             left: -15px;
+
+            @include mobile {
+                top: 8px;
+                left: 16px;
+            }
         }
     }
 
     &__title-image {
+        transform: translate(4px, 13px);
         margin-left: -12px;
         display: inline-block;
-        transform: translate(4px, 13px);
+
+        @include mobile {
+            transform: translate(4px, 6px);
+            margin-left: -7px;
+            width: 33px;
+        }
     }
 
     &__body {
@@ -80,6 +110,11 @@
         display: flex;
         flex-direction: column;
         gap: 27px;
+
+        @include mobile {
+            margin-bottom: 24px;
+            gap: 15px;
+        }
     }
 
     &__description {
@@ -87,6 +122,11 @@
         font-size: 18px;
         line-height: 1.6;
         color: #fff;
+
+        @include mobile {
+            font-size: 12px;
+            text-align: center;
+        }
     }
 
     &__footer {
@@ -96,6 +136,22 @@
 
         @include mobile {
             flex-direction: column;
+            gap: 17px;
+        }
+    }
+
+    &__btn-desktop {
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__btn-mobile {
+        display: none;
+
+        @include mobile {
+            display: flex;
         }
     }
 }

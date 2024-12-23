@@ -10,6 +10,13 @@
     font-size: 18px;
     color: #fff;
 
+    @include mobile {
+        padding: 18px 34px 20px;
+        min-width: 144px;
+        height: 54px;
+        font-size: 13px;
+    }
+
     &--fill {
         background: linear-gradient(157deg, #ff9b05 0%, #ff8f3f 100%);
 
@@ -24,6 +31,12 @@
         height: 78px;
         border: 1px solid #6cffff;
 
+        @include mobile {
+            padding: 18px 24px 20px;
+            min-width: 144px;
+            height: 54px;
+        }
+
         &:hover {
             color: #6cffff;
             box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
@@ -34,6 +47,12 @@
         padding: 27px 34px;
         height: 78px;
         gap: 18px;
+
+        @include mobile {
+            padding: 18px 25px;
+            height: 54px;
+            gap: 13px;
+        }
 
         &:hover {
 
@@ -49,6 +68,11 @@
             height: 24px;
             background: url('../img/arrow-right.svg') no-repeat center / cover;
             transition: all .2s;
+
+            @include mobile {
+                width: 32px;
+                height: 18px;
+            }
         }
     }
 
@@ -57,6 +81,13 @@
         min-width: 240px;
         height: 78px;
         gap: 36px;
+
+        @include mobile {
+            padding: 18px 25px;
+            min-width: 144px;
+            height: 54px;
+            gap: 13px;
+        }
 
         &:hover {
 
@@ -72,6 +103,11 @@
             height: 30px;
             background: url('../img/arrow-right.svg') no-repeat center / cover;
             transition: all .2s;
+
+            @include mobile {
+                width: 32px;
+                height: 18px;
+            }
         }
     }
 
