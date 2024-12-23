@@ -62,9 +62,7 @@
         will-change: transform; // Улучшает рендеринг
     }
 
-    &__gallery-image {
-        object-fit: cover;
-    }
+    &__gallery-image {}
 
     &__gallery-controls {
         position: relative;
