@@ -5,4 +5,8 @@
     left: 0;
     z-index: 10;
     padding: 31px 0;
+
+    @include mobile {
+        padding: 15px 0;
+    }
 }

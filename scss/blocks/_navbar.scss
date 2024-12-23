@@ -4,10 +4,21 @@
     align-items: flex-start;
     gap: 30px;
 
+    @include mobile {
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+    }
+
     // logo
 
     &__logo {
         margin: 12px 0 0 -9px;
+
+        @include mobile {
+            margin: 0;
+            width: 150px;
+        }
     }
 
     &__logo-image {}
@@ -76,6 +87,10 @@
         background: #fff;
         transition: all .2s;
 
+        @include mobile {
+            width: 66px;
+        }
+
         &:hover {
             box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.15);
         }
@@ -99,6 +114,12 @@
         align-items: center;
         gap: 15px;
 
+        @include mobile {
+            padding: 11px 9px;
+            height: 36px;
+            gap: 9px;
+        }
+
         &:hover {
 
             .navbar__language-text {
@@ -116,11 +137,20 @@
             height: 5px;
             background: url('../img/language-arrow.svg') no-repeat center;
             transition: all .2s;
+
+            @include mobile {
+                display: none;
+            }
         }
     }
 
     &__language-flag {
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);
+
+        @include mobile {
+            width: 20px;
+            height: 14px;
+        }
     }
 
     &__language-text {
@@ -128,6 +158,10 @@
         font-size: 17px;
         color: #2e3a59;
         transition: all .2s;
+
+        @include mobile {
+            font-size: 12px;
+        }
     }
 
     &__language-list {
@@ -146,6 +180,12 @@
         display: flex;
         align-items: center;
         gap: 15px;
+
+        @include mobile {
+            padding: 11px 9px;
+            height: 36px;
+            gap: 9px;
+        }
 
         &:hover {
 
