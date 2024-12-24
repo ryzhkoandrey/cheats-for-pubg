@@ -182,6 +182,7 @@
             position: static;
             transform: none;
             justify-content: center;
+            gap: 29px;
         }
     }
 
@@ -210,22 +211,43 @@
 
         &--prev {
             transform: rotate(-135deg);
+
+            @include mobile {
+                transform: none;
+            }
         }
 
         &--next {
             transform: rotate(45deg);
+
+            @include mobile {
+                transform: none;
+            }
         }
     }
 
     &__controls-btn-icon {
         transition: all .2s;
 
+        @include mobile {
+            width: 54px;
+            height: 28px;
+        }
+
         &--prev {
             transform: translate(4px, -3px) rotate(135deg);
+
+            @include mobile {
+                transform: rotate(-180deg);
+            }
         }
 
         &--next {
             transform: translate(2px, -3px) rotate(-45deg);
+
+            @include mobile {
+                transform: none;
+            }
         }
     }
 }
