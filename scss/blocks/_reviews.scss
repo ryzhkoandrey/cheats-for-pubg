@@ -9,6 +9,7 @@
 
     @include mobile {
         padding-top: 68px;
+        min-height: 384px;
         background-image: url('../img/reviews-bg-mobile.jpg');
 
         @media (min-resolution: 192dpi) {
@@ -20,6 +21,10 @@
         margin-bottom: 32px;
         display: flex;
         justify-content: center;
+
+        @include mobile {
+            margin-bottom: 23px;
+        }
     }
 
     &__title {
@@ -51,11 +56,20 @@
         &::before {
             top: -5px;
             left: -27px;
+
+            @include mobile {
+                top: -2px;
+                left: -13px;
+            }
         }
 
         &::after {
             top: 5px;
             left: -15px;
+
+            @include mobile {
+                left: -8px;
+            }
         }
     }
 
@@ -81,6 +95,11 @@
         align-items: center;
         gap: 20px;
         background: #fff;
+
+        @include mobile {
+            padding: 39px 19px 23px;
+            min-height: 136px;
+        }
 
         &::before,
         &::after {
@@ -110,6 +129,11 @@
         transform: translateX(-50%);
         border: 4px solid #fff;
         border-radius: 100%;
+
+        @include mobile {
+            width: 65px;
+            height: 65px;
+        }
     }
 
     &__slide-name {
@@ -135,6 +159,10 @@
         text-align: center;
         line-height: 1.6;
         color: #2e3a59;
+
+        @include mobile {
+            font-size: 11px;
+        }
     }
 
     &__controls {
@@ -149,6 +177,12 @@
         justify-content: space-between;
         align-items: center;
         pointer-events: none;
+
+        @include mobile {
+            position: static;
+            transform: none;
+            justify-content: center;
+        }
     }
 
     &__controls-btn {
@@ -161,6 +195,14 @@
         box-shadow: inset 0 0 25px 0 rgba(0, 50, 180, 0.3), 0 4px 25px 0 rgba(10, 166, 254, 0.48);
         background: linear-gradient(152deg, #0aa6fe 0%, #05ffff 100%);
         pointer-events: all;
+
+        @include mobile {
+            border-radius: 0;
+            width: 54px;
+            height: 28px;
+            box-shadow: none;
+            background: transparent;
+        }
 
         &:hover {
             box-shadow: inset 0 0 25px 0 rgba(0, 50, 180, 0.5), 0 4px 25px 0 rgba(10, 166, 254, 0.7);
