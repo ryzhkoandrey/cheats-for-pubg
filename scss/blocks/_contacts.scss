@@ -85,12 +85,13 @@
         &::before,
         &::after {
             position: absolute;
+            z-index: 2;
             width: 201px;
             height: 201px;
 
             @include mobile {
-                width: 106px;
-                height: 106px;
+                width: 126px;
+                height: 126px;
             }
         }
 
@@ -99,6 +100,13 @@
             bottom: -108px;
             left: -101px;
             background: url('../img/discord.svg') no-repeat center / cover;
+
+            @include mobile {
+                top: -85px;
+                bottom: auto;
+                left: 50%;
+                transform: translateX(-16px);
+            }
         }
 
         &::after {
@@ -106,6 +114,13 @@
             top: -94px;
             right: -100px;
             background: url('../img/telegram.svg') no-repeat center / cover;
+
+            @include mobile {
+                top: -85px;
+                right: auto;
+                left: 50%;
+                transform: translateX(-110px);
+            }
         }
     }
 
