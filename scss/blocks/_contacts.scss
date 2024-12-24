@@ -89,20 +89,23 @@
             height: 201px;
 
             @include mobile {
-                display: none;
+                width: 106px;
+                height: 106px;
             }
         }
 
         &::before {
-            content: url('../img/discord.svg');
+            content: '';
             bottom: -108px;
             left: -101px;
+            background: url('../img/discord.svg') no-repeat center / cover;
         }
 
         &::after {
-            content: url('../img/telegram.svg');
+            content: '';
             top: -94px;
             right: -100px;
+            background: url('../img/telegram.svg') no-repeat center / cover;
         }
     }
 
@@ -172,9 +175,13 @@
         }
 
         &--comment {
-            height: 80px;
+            height: 103px;
             line-height: 1.6;
             background: url('../img/comment.svg') no-repeat top 5px left;
+
+            @include mobile {
+                height: 80px;
+            }
         }
     }
 
