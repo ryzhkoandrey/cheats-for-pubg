@@ -5,6 +5,10 @@
         margin-bottom: 88px;
         display: flex;
         justify-content: center;
+
+        @include mobile {
+            margin-bottom: 50px;
+        }
     }
 
     &__title {
@@ -17,18 +21,32 @@
             width: 40px;
             height: 8px;
             transform: rotate(-45deg);
+
+            @include mobile {
+                width: 23px;
+                height: 5px;
+            }
         }
 
         &::before {
             top: -4px;
             left: -32px;
             background: #fb8500;
+
+            @include mobile {
+                left: -16px;
+            }
         }
 
         &::after {
             bottom: -4px;
             right: -32px;
             background: #0aa6fe;
+
+            @include mobile {
+                bottom: -6px;
+                right: -16px;
+            }
         }
     }
 
@@ -83,6 +101,11 @@
         text-align: left;
         color: #2e3a59;
 
+        @include mobile {
+            padding: 26px 50px 26px 20px;
+            font-size: 13px;
+        }
+
         &:hover {
             color: #0aa6fe;
 
@@ -100,6 +123,11 @@
             height: 23px;
             background: url('../img/plus.svg');
             transition: all .2s;
+
+            @include mobile {
+                top: 22px;
+                right: 12px;
+            }
         }
     }
 
@@ -118,6 +146,10 @@
         flex-direction: column;
         gap: 15px;
 
+        @include mobile {
+            padding: 3px 25px 27px 40px;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -126,6 +158,11 @@
             left: 37px;
             width: 2px;
             background: linear-gradient(174deg, #0aa6fe 0%, #05ffff 100%);
+
+            @include mobile {
+                bottom: 22px;
+                left: 21px;
+            }
         }
     }
 
@@ -134,6 +171,10 @@
         font-size: 16px;
         line-height: 1.8;
         color: #727272;
+
+        @include mobile {
+            font-size: 11px;
+        }
     }
 
     // footer
