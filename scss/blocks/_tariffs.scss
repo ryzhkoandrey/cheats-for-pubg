@@ -3,6 +3,7 @@
     padding-top: 106px;
 
     @include mobile {
+        margin-bottom: 79px;
         padding-top: 28px;
     }
 
@@ -150,7 +151,7 @@
         gap: 26px;
 
         @include mobile {
-            margin-bottom: 30px;
+            margin-bottom: 22px;
             padding: 0 29px 0;
             gap: 11px;
         }
@@ -209,17 +210,31 @@
         justify-content: center;
         gap: 22px;
         color: #2e3a59;
+
+        @include mobile {
+            transform: translateX(15px);
+            margin-bottom: 22px;
+            gap: 5px;
+        }
     }
 
     &__card-price-count {
         padding-top: 8px;
         font-weight: 600;
         font-size: 45px;
+
+        @include mobile {
+            font-size: 35px;
+        }
     }
 
     &__card-price-currency {
         font-weight: 500;
         font-size: 35px;
+
+        @include mobile {
+            font-size: 25px;
+        }
     }
 
     &__card-btn {
@@ -232,6 +247,11 @@
         gap: 22px;
         box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
         background: linear-gradient(157deg, #ff9b05 0%, #ff8f3f 100%);
+
+        @include mobile {
+            min-height: 59px;
+            gap: 20px;
+        }
 
         &:hover {
 
@@ -248,6 +268,10 @@
             height: 24px;
             background: url('../img/arrow-right.svg') no-repeat center / cover;
             transition: all .2s;
+
+            @include mobile {
+                transform: translateX(8px);
+            }
         }
     }
 
@@ -256,5 +280,10 @@
         font-weight: 600;
         font-size: 18px;
         color: #fff;
+
+        @include mobile {
+            transform: translate(8px, 0);
+            font-size: 15px;
+        }
     }
 }
