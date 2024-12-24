@@ -1,7 +1,7 @@
 .reviews {
     padding-top: 167px;
     min-height: 601px;
-    background: url('../img/reviews-bg.jpg') no-repeat top center / cover;
+    background: #4d97f4 url('../img/reviews-bg.jpg') no-repeat top center / cover;
 
     @media (min-resolution: 192dpi) {
         background-image: url('../img/reviews-bg@2x.jpg');
@@ -23,7 +23,7 @@
         justify-content: center;
 
         @include mobile {
-            margin-bottom: 23px;
+            margin-bottom: 25px;
         }
     }
 
@@ -75,12 +75,20 @@
 
     &__slider {
         position: relative;
+
+        @include mobile {
+            margin: 0 calc(var(--container-padding) * -1);
+        }
     }
 
     &__slide {
         padding: 45px 58px 61px;
         display: flex;
         justify-content: center;
+
+        @include mobile {
+            padding: 33px 8px 36px;
+        }
     }
 
     &__slide-card {
@@ -99,6 +107,7 @@
         @include mobile {
             padding: 39px 19px 23px;
             min-height: 136px;
+            gap: 10px;
         }
 
         &::before,
@@ -107,7 +116,12 @@
             position: absolute;
             width: 47px;
             height: 39px;
-            background: url('../img/quotes.svg');
+            background: url('../img/quotes.svg') no-repeat center / cover;
+
+            @include mobile {
+                width: 29px;
+                height: 24px;
+            }
         }
 
         &::before {
@@ -131,6 +145,7 @@
         border-radius: 100%;
 
         @include mobile {
+            top: -33px;
             width: 65px;
             height: 65px;
         }
@@ -142,6 +157,10 @@
         font-size: 18px;
         color: #2e3a59;
 
+        @include mobile {
+            font-size: 13px;
+        }
+
         &::after {
             content: '';
             position: absolute;
@@ -149,7 +168,14 @@
             right: -38px;
             width: 29px;
             height: 11px;
-            background: url('../img/decor.svg');
+            background: url('../img/decor.svg') no-repeat center / cover;
+
+            @include mobile {
+                top: 7px;
+                right: -28px;
+                width: 19px;
+                height: 7px;
+            }
         }
     }
 
@@ -162,6 +188,7 @@
 
         @include mobile {
             font-size: 11px;
+            line-height: 1.4;
         }
     }
 
