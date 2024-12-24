@@ -73,11 +73,19 @@
         box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.03);
         background: #fff;
 
+        @include mobile {
+            padding: 45px 30px 29px 30px;
+        }
+
         &::before,
         &::after {
             position: absolute;
             width: 201px;
             height: 201px;
+
+            @include mobile {
+                display: none;
+            }
         }
 
         &::before {
@@ -95,16 +103,29 @@
 
     &__form-header {
         margin-bottom: 31px;
+
+        @include mobile {
+            margin-bottom: 39px;
+        }
     }
 
     &__form-title {
         font-weight: 600;
         font-size: 18px;
         color: #2e3a59;
+
+        @include mobile {
+            font-size: 14px;
+            text-align: center;
+        }
     }
 
     &__form-body {
         margin-bottom: 44px;
+
+        @include mobile {
+            margin-bottom: 26px;
+        }
     }
 
     &__form-row {
@@ -112,6 +133,12 @@
         display: flex;
         align-items: center;
         gap: 20px;
+
+        @include mobile {
+            margin-bottom: 34px;
+            flex-direction: column;
+            gap: 34px;
+        }
     }
 
     &__form-input {
@@ -121,6 +148,11 @@
         font-size: 14px;
         color: #2e3a59;
         border-bottom: 1px solid rgba(165, 170, 183, .5);
+
+        @include mobile {
+            font-size: 13px;
+            border-bottom: 0;
+        }
 
         &::placeholder {
             color: rgba(46, 58, 89, 0.43);
@@ -135,7 +167,7 @@
         }
 
         &--comment {
-            height: 103px;
+            height: 80px;
             line-height: 1.6;
             background: url('../img/comment.svg') no-repeat top 5px left;
         }
