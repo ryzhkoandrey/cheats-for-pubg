@@ -2,17 +2,25 @@
     position: relative;
     overflow: hidden;
     margin-bottom: -200px;
-    padding-bottom: 347px;
+    padding: 13px 0 347px;
     background: url('../img/contacts-bg.jpg') no-repeat top center / cover;
 
     @media (min-resolution: 192dpi) {
         background-image: url('../img/contacts-bg@2x.jpg');
     }
 
+    @include mobile {
+        padding: 14px 0 347px;
+    }
+
     &__heading {
         margin-bottom: 90px;
         display: flex;
         justify-content: center;
+
+        @include mobile {
+            margin-bottom: 98px;
+        }
     }
 
     &__title {
@@ -26,16 +34,31 @@
             height: 8px;
             background: #fb8500;
             transform: rotate(-45deg);
+
+            @include mobile {
+                width: 30px;
+                height: 6px;
+            }
         }
 
         &::before {
             top: 0;
             left: -27px;
+
+            @include mobile {
+                top: -4px;
+                left: -19px;
+            }
         }
 
         &::after {
             top: 10px;
             left: -15px;
+
+            @include mobile {
+                top: 6px;
+                left: -11px;
+            }
         }
     }
 
