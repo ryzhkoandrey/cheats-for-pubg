@@ -15,41 +15,49 @@
         }
     }
 
-    &__title {
+    &__title {}
+
+    &__title-word {
         position: relative;
 
-        &::before,
-        &::after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 8px;
-            transform: rotate(-45deg);
+        &--first {
 
-            @include mobile {
-                width: 23px;
-                height: 5px;
+            &::before {
+                content: '';
+                position: absolute;
+                top: -4px;
+                left: -32px;
+                transform: rotate(-45deg);
+                width: 40px;
+                height: 8px;
+                background: #fb8500;
+
+                @include mobile {
+                    left: -16px;
+                    width: 23px;
+                    height: 5px;
+                }
             }
         }
 
-        &::before {
-            top: -4px;
-            left: -32px;
-            background: #fb8500;
+        &--last {
 
-            @include mobile {
-                left: -16px;
-            }
-        }
+            &::after {
+                content: '';
+                position: absolute;
+                transform: rotate(-45deg);
+                bottom: -4px;
+                right: -32px;
+                width: 40px;
+                height: 8px;
+                background: #0aa6fe;
 
-        &::after {
-            bottom: -4px;
-            right: -32px;
-            background: #0aa6fe;
-
-            @include mobile {
-                bottom: -6px;
-                right: -16px;
+                @include mobile {
+                    bottom: -6px;
+                    right: -16px;
+                    width: 23px;
+                    height: 5px;
+                }
             }
         }
     }
