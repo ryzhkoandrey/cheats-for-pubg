@@ -4,7 +4,7 @@
     align-items: flex-start;
     gap: 30px;
 
-    @include mobile {
+    @include tablet {
         justify-content: space-between;
         gap: 15px;
     }
@@ -14,20 +14,35 @@
     &__menu-toggler {
         display: none;
 
-        @include mobile {
+        @include laptop {
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        @include tablet {
             transform: translateY(12px);
-            display: block;
+            height: auto;
         }
     }
 
-    &__menu-toggler-icon {}
+    &__menu-toggler-icon {
+
+        @include laptop {
+            width: 50px;
+        }
+
+        @include tablet {
+            width: auto;
+        }
+    }
 
     // logo
 
     &__logo {
         margin: 12px 0 0 -9px;
 
-        @include mobile {
+        @include tablet {
             transform: translateY(5px);
             margin: 0;
             width: 150px;
@@ -41,7 +56,7 @@
     &__menu {
         margin-top: 20px;
 
-        @include mobile {
+        @include laptop {
             display: none;
         }
     }
@@ -100,7 +115,7 @@
         background: #fff;
         transition: all .2s;
 
-        @include mobile {
+        @include tablet {
             width: 66px;
         }
 
@@ -127,7 +142,7 @@
         align-items: center;
         gap: 15px;
 
-        @include mobile {
+        @include tablet {
             padding: 11px 9px;
             height: 36px;
             gap: 9px;
@@ -151,7 +166,7 @@
             background: url('../img/language-arrow.svg') no-repeat center;
             transition: all .2s;
 
-            @include mobile {
+            @include tablet {
                 display: none;
             }
         }
@@ -160,7 +175,7 @@
     &__language-flag {
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);
 
-        @include mobile {
+        @include tablet {
             width: 20px;
             height: 14px;
         }
@@ -172,7 +187,7 @@
         color: #2e3a59;
         transition: all .2s;
 
-        @include mobile {
+        @include tablet {
             font-size: 12px;
         }
     }
@@ -194,7 +209,7 @@
         align-items: center;
         gap: 15px;
 
-        @include mobile {
+        @include tablet {
             padding: 11px 9px;
             height: 36px;
             gap: 9px;
@@ -220,7 +235,7 @@
         background: linear-gradient(157deg, #ff9b05 0%, #ff8f3f 100%);
         box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
 
-        @include mobile {
+        @include laptop {
             display: none;
         }
 
