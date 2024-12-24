@@ -91,6 +91,8 @@
         }
     }
 
+    // slide-card
+
     &__slide-card {
         position: relative;
         border-radius: 5px;
@@ -127,12 +129,20 @@
         &::before {
             top: -24px;
             left: 0;
+
+            @include mobile {
+                top: -15px;
+            }
         }
 
         &::after {
             right: 0;
             bottom: -24px;
             transform: rotate(180deg);
+
+            @include mobile {
+                bottom: -15px;
+            }
         }
     }
 
@@ -171,7 +181,7 @@
             background: url('../img/decor.svg') no-repeat center / cover;
 
             @include mobile {
-                top: 7px;
+                top: 5px;
                 right: -28px;
                 width: 19px;
                 height: 7px;
@@ -191,6 +201,8 @@
             line-height: 1.4;
         }
     }
+
+    // controls
 
     &__controls {
         position: absolute;
