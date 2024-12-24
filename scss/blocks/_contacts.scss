@@ -10,7 +10,12 @@
     }
 
     @include mobile {
-        padding: 14px 0 347px;
+        padding: 14px 0 110px;
+        background-image: url('../img/contacts-bg-mobile.jpg');
+
+        @media (min-resolution: 192dpi) {
+            background-image: url('../img/contacts-bg-mobile@2x.jpg');
+        }
     }
 
     &__heading {
