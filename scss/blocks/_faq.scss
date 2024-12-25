@@ -89,13 +89,6 @@
 
         &--active {
 
-            .faq__question-toggler {
-
-                &::after {
-                    transform: rotate(45deg);
-                }
-            }
-
             &:hover {
 
                 .faq__question-toggler {
@@ -104,6 +97,17 @@
                         transform: rotate(-135deg);
                     }
                 }
+            }
+
+            .faq__question-toggler {
+
+                &::after {
+                    transform: rotate(45deg);
+                }
+            }
+
+            .faq__answer {
+                overflow: visible;
             }
         }
     }
