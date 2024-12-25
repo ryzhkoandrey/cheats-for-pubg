@@ -86,6 +86,10 @@
         display: flex;
         justify-content: center;
 
+        @include tablet-small {
+            padding: 45px 0 61px;
+        }
+
         @include mobile {
             padding: 33px 8px 36px;
         }
@@ -105,6 +109,10 @@
         align-items: center;
         gap: 20px;
         background: #fff;
+
+        @include tablet-small {
+            padding: 83px 80px 42px;
+        }
 
         @include mobile {
             padding: 39px 19px 23px;
@@ -167,6 +175,10 @@
         font-size: 18px;
         color: #2e3a59;
 
+        @include tablet {
+            font-size: 16px;
+        }
+
         @include mobile {
             font-size: 13px;
         }
@@ -217,6 +229,10 @@
         align-items: center;
         pointer-events: none;
 
+        @include tablet-small {
+            top: 130px;
+        }
+
         @include mobile {
             position: static;
             transform: none;
@@ -235,6 +251,16 @@
         box-shadow: inset 0 0 25px 0 rgba(0, 50, 180, 0.3), 0 4px 25px 0 rgba(10, 166, 254, 0.48);
         background: linear-gradient(152deg, #0aa6fe 0%, #05ffff 100%);
         pointer-events: all;
+
+        @include tablet {
+            width: 100px;
+            height: 100px;
+        }
+
+        @include tablet-small {
+            width: 75px;
+            height: 75px;
+        }
 
         @include mobile {
             border-radius: 0;
@@ -255,6 +281,14 @@
         &--prev {
             transform: rotate(-135deg);
 
+            @include tablet {
+                transform: translateX(7px) rotate(-135deg);
+            }
+
+            @include tablet-small {
+                transform: translateX(-14px) rotate(-135deg);
+            }
+
             @include mobile {
                 transform: none;
             }
@@ -262,6 +296,14 @@
 
         &--next {
             transform: rotate(45deg);
+
+            @include tablet {
+                transform: translateX(-7px) rotate(45deg);
+            }
+
+            @include tablet-small {
+                transform: translateX(14px) rotate(45deg);
+            }
 
             @include mobile {
                 transform: none;
