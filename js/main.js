@@ -183,28 +183,44 @@ const swiperReviews = new Swiper('#swiper-reviews', {
 
 const faqTogglers = document.querySelectorAll('.faq__question-toggler');
 
-// Разворачиваем все открытые вопросы при загрузке страницы
-faqTogglers.forEach(function (toggler) {
+// Инициализация: открываем вопросы, которые активны
+function initializeFaq() {
+    faqTogglers.forEach(toggler => {
+        const isOpen = toggler.parentElement.classList.contains('faq__question--active');
+        changeAnswerHeight(toggler, isOpen);
+    });
+}
 
-    const isOpen = toggler.parentElement.classList.contains('faq__question--active');
+// Обработчик клика по вопросу
+function handleToggleClick(event) {
+    const toggler = event.currentTarget;
+    const isOpen = toggler.parentElement.classList.toggle('faq__question--active');
+    changeAnswerHeight(toggler, isOpen);
+}
+
+// Пересчет высоты активных вопросов при изменении размера окна
+function handleResize() {
+    faqTogglers.forEach(toggler => {
+        const isOpen = toggler.parentElement.classList.contains('faq__question--active');
+        changeAnswerHeight(toggler, isOpen);
+    });
+}
+
+// Функция изменения высоты ответа
+function changeAnswerHeight(toggler, isOpen) {
     const answer = toggler.nextElementSibling;
-
     if (isOpen) {
         answer.style.maxHeight = answer.scrollHeight + 'px';
+    } else {
+        answer.removeAttribute('style');
     }
+}
+
+// Подключение событий
+faqTogglers.forEach(toggler => {
+    toggler.addEventListener('click', handleToggleClick);
 });
 
-// Разворачиваем / сворачиваем вопрос по клику
-faqTogglers.forEach(function (toggler) {
-    toggler.addEventListener('click', function () {
-
-        const isOpen = toggler.parentElement.classList.toggle('faq__question--active');
-        const answer = toggler.nextElementSibling;
-
-        if (isOpen) {
-            answer.style.maxHeight = answer.scrollHeight + 'px';
-        } else {
-            answer.removeAttribute('style');
-        }
-    });
-});
+// Инициализация
+initializeFaq();
+window.addEventListener('resize', handleResize);
