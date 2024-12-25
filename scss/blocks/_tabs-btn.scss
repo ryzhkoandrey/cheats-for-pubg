@@ -8,7 +8,7 @@
     box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.03);
     background: #fff;
 
-    @include mobile {
+    @include tablet {
         height: 54px;
         gap: 12px;
     }
@@ -31,7 +31,7 @@
     &--windows {
         width: 206px;
 
-        @include mobile {
+        @include tablet {
             width: 123px;
         }
 
@@ -43,7 +43,7 @@
             width: 33px;
             height: 29px;
 
-            @include mobile {
+            @include tablet {
                 width: 23px;
                 height: 21px;
             }
@@ -53,7 +53,7 @@
     &--android {
         width: 195px;
 
-        @include mobile {
+        @include tablet {
             width: 116px;
         }
 
@@ -65,7 +65,7 @@
             width: 33px;
             height: 39px;
 
-            @include mobile {
+            @include tablet {
                 width: 18px;
                 height: 21px;
             }
@@ -75,7 +75,7 @@
     &--ios {
         width: 135px;
 
-        @include mobile {
+        @include tablet {
             gap: 9px;
             width: 81px;
         }
@@ -89,7 +89,7 @@
             width: 30px;
             height: 40px;
 
-            @include mobile {
+            @include tablet {
                 transform: translateY(-2px);
                 width: 16px;
                 height: 21px;
@@ -142,6 +142,10 @@
         font-size: 18px;
         color: #aaa;
         transition: all .2s;
+
+        @include tablet {
+            font-size: 14px;
+        }
 
         @include mobile {
             font-size: 12px;

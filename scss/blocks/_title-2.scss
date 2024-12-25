@@ -5,6 +5,10 @@
     text-transform: uppercase;
     color: #2e3a59;
 
+    @include tablet {
+        font-size: 36px;
+    }
+
     @include mobile {
         font-size: 30px;
     }

@@ -118,6 +118,12 @@
         gap: 18px;
         background: #ff3b3b;
 
+        @include mobile {
+            padding: 18px 25px;
+            height: 54px;
+            gap: 13px;
+        }
+
         &:hover {
 
             &::after {
