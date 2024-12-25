@@ -168,6 +168,10 @@
         flex-direction: column;
         gap: 15px;
 
+        @include tablet-small {
+            padding: 3px 40px 37px 58px;
+        }
+
         @include mobile {
             padding: 0 25px 27px 40px;
         }
