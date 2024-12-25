@@ -91,6 +91,8 @@
 
     &__card {
         border-radius: 5px 55px;
+        display: flex;
+        flex-direction: column;
         box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.05);
         background: #fff;
 
@@ -239,6 +241,7 @@
 
     &__card-btn {
         border-radius: 0 0 5px 55px;
+        margin-top: auto;
         padding: 15px 30px;
         min-height: 76px;
         display: flex;
