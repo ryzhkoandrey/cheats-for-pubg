@@ -8,6 +8,10 @@
         background-image: url('../img/hero-bg@2x.jpg');
     }
 
+    @include tablet {
+        padding-top: 120px;
+    }
+
     @include mobile {
         margin-bottom: 25px;
         padding-top: 94px;
@@ -53,6 +57,10 @@
         font-size: 55px;
         text-transform: uppercase;
         color: #fff;
+
+        @include tablet {
+            font-size: 40px;
+        }
 
         @include mobile {
             font-size: 30px;
@@ -129,6 +137,10 @@
         line-height: 1.6;
         color: #fff;
 
+        @include tablet {
+            font-size: 16px;
+        }
+
         @include mobile {
             font-size: 12px;
             text-align: center;
@@ -140,9 +152,25 @@
         align-items: center;
         gap: 34px;
 
-        @include mobile {
+        @include tablet {
             flex-direction: column;
+            align-items: flex-start;
             gap: 17px;
+        }
+
+        @include mobile {
+            align-items: center;
+        }
+    }
+
+    &__btn {
+
+        @include tablet {
+            min-width: 260px;
+        }
+
+        @include mobile {
+            min-width: 144px;
         }
     }
 
