@@ -4,28 +4,63 @@
 // =============== MENU ===============
 // ====================================
 
-// Скролл я якорю
+// Функция: Скролл я якорю
 
-const scrollLinks = document.querySelectorAll('.navbar__menu-link');
+function scrollToAnchor(link) {
+    const targetId = link.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
 
-scrollLinks.forEach(link => {
+    if (targetElement) {
+        // Получаем индивидуальный отступ из data-offset (по умолчанию 0)
+        const offset = parseInt(targetElement.getAttribute('data-offset')) || 0;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - offset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth',
+        });
+    }
+}
+
+// Клик по ссылке
+
+const menuLinks = document.querySelectorAll('.navbar__menu-link');
+
+menuLinks.forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault();
+        scrollToAnchor(this)
+    });
+});
 
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
+// ===========================================
+// =============== MOBILE-MENU ===============
+// ===========================================
 
-        if (targetElement) {
-            // Получаем индивидуальный отступ из data-offset (по умолчанию 0)
-            const offset = parseInt(targetElement.getAttribute('data-offset')) || 0;
-            const elementPosition = targetElement.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.scrollY - offset;
+// Открыть / Закрыть
 
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth',
-            });
-        }
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileMenuOpen = document.querySelector('.navbar__menu-toggler');
+const mobileMenuClose = document.querySelector('.mobile-menu__close');
+
+mobileMenuOpen.onclick = toggleMobileMenu;
+mobileMenuClose.onclick = toggleMobileMenu;
+
+function toggleMobileMenu() {
+    mobileMenu.classList.toggle('mobile-menu--active');
+    document.body.classList.toggle('no-scroll');
+};
+
+// Клик по ссылке
+
+const mobileMenulLinks = document.querySelectorAll('.mobile-menu__link');
+
+mobileMenulLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        toggleMobileMenu();
+        scrollToAnchor(this)
     });
 });
 
