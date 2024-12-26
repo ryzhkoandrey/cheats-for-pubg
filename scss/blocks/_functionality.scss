@@ -110,7 +110,7 @@
         &:hover {
 
             path {
-                fill: #fb8500;
+                fill: var(--color-secondary-1);
             }
         }
     }
@@ -125,7 +125,7 @@
         }
 
         path {
-            fill: #0aa6fe;
+            fill: var(--color-primary-1);
         }
     }
 
@@ -156,7 +156,7 @@
             position: absolute;
             width: 40px;
             height: 8px;
-            background: #fb8500;
+            background: var(--color-secondary-1);
             transform: rotate(-45deg);
 
             @include mobile {
@@ -192,7 +192,7 @@
         font-size: 18px;
         line-height: 1.8;
         text-align: center;
-        color: #828282;
+        color: var(--color-text-3);
 
         @include mobile {
             font-size: 12px;
@@ -213,7 +213,7 @@
             font-size: 18px;
             text-align: center;
             text-transform: uppercase;
-            color: #2e3a59;
+            color: var(--color-text-1);
         }
 
         @include mobile {
@@ -246,7 +246,7 @@
         padding-left: 27px;
         font-weight: 400;
         font-size: 18px;
-        color: #2e3a59;
+        color: var(--color-text-1);
 
         &::before {
             content: '';
@@ -301,7 +301,7 @@
     &__note-text {
         font-weight: 400;
         font-size: 18px;
-        color: #828282;
+        color: var(--color-text-3);
     }
 
     &__btns {

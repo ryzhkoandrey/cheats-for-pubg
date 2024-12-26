@@ -1,5 +1,28 @@
 :root {
 
+    // fonts
+
+    --font-primary: "Montserrat", sans-serif;
+
+    // colors
+
+    --color-primary-1: #0aa6fe;
+    --color-primary-2: #4d97f4;
+
+    --color-secondary-1: #fb8500;
+    --color-secondary-2: #ff8f3f;
+    --color-secondary-3: #ff9b05;
+
+    --color-accent: #6cffff;
+
+    --color-text-1: #2e3a59;
+    --color-text-2: #727272;
+    --color-text-3: #828282;
+    --color-text-4: #aaa;
+    --color-text-5: #a5aab7;
+
+    --color-text-light: #fff;
+
     // container
 
     --container-width: 1320px;
@@ -8,9 +31,4 @@
     @include mobile {
         --container-padding: 18px;
     }
-
-    // fonts
-
-    --font-primary: "Montserrat",
-    sans-serif;
 }

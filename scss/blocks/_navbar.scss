@@ -74,7 +74,7 @@
         font-weight: 700;
         font-size: 17px;
         text-transform: uppercase;
-        color: #fff;
+        color: var(--color-text-light);
 
         &:hover {
 
@@ -93,7 +93,7 @@
             border-radius: 5px;
             width: 0;
             height: 3px;
-            background: linear-gradient(157deg, #ff9b05 0%, #ff8f3f 100%);
+            background: linear-gradient(157deg, var(--color-secondary-3) 0%, var(--color-secondary-2) 100%);
             transition: all .2s;
         }
     }
@@ -151,7 +151,7 @@
         &:hover {
 
             .navbar__language-text {
-                color: #0aa6fe;
+                color: var(--color-primary-1);
             }
         }
 
@@ -184,7 +184,7 @@
     &__language-text {
         font-weight: 700;
         font-size: 17px;
-        color: #2e3a59;
+        color: var(--color-text-1);
         transition: all .2s;
 
         @include tablet {
@@ -218,7 +218,7 @@
         &:hover {
 
             .navbar__language-text {
-                color: #0aa6fe;
+                color: var(--color-primary-1);
             }
         }
     }
@@ -232,7 +232,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(157deg, #ff9b05 0%, #ff8f3f 100%);
+        background: linear-gradient(157deg, var(--color-secondary-3) 0%, var(--color-secondary-2) 100%);
         box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
 
         @include laptop {

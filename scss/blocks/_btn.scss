@@ -8,7 +8,7 @@
     align-items: center;
     font-weight: 600;
     font-size: 18px;
-    color: #fff;
+    color: var(--color-text-light);
 
     @include mobile {
         padding: 18px 34px 20px;
@@ -18,7 +18,7 @@
     }
 
     &--fill {
-        background: linear-gradient(157deg, #ff9b05 0%, #ff8f3f 100%);
+        background: linear-gradient(157deg, var(--color-secondary-3) 0%, var(--color-secondary-2) 100%);
 
         &:hover {
             box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.16);
@@ -38,7 +38,7 @@
         }
 
         &:hover {
-            color: #6cffff;
+            color: var(--color-accent);
             box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
         }
     }

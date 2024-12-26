@@ -19,12 +19,12 @@
         .tabs-btn__icon {
 
             path {
-                fill: #0aa6fe;
+                fill: var(--color-primary-1);
             }
         }
 
         .tabs-btn__text {
-            color: #0aa6fe;
+            color: var(--color-primary-1);
         }
     }
 
@@ -99,7 +99,7 @@
 
     &--active {
         box-shadow: 0 15px 25px 0 rgba(0, 163, 255, 0.3);
-        background: linear-gradient(128deg, #0aa6fe 0%, #05ffff 100%);
+        background: linear-gradient(128deg, var(--color-primary-1) 0%, #05ffff 100%);
         cursor: default;
         pointer-events: none;
 
@@ -114,7 +114,7 @@
             }
 
             .tabs-btn__text {
-                color: #fff;
+                color: var(--color-text-light);
             }
         }
 
@@ -126,7 +126,7 @@
         }
 
         .tabs-btn__text {
-            color: #fff;
+            color: var(--color-text-light);
         }
     }
 
@@ -140,7 +140,7 @@
     &__text {
         font-weight: 700;
         font-size: 18px;
-        color: #aaa;
+        color: var(--color-text-4);
         transition: all .2s;
 
         @include tablet {

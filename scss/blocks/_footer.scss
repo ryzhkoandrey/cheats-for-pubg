@@ -19,7 +19,7 @@
         font-weight: 400;
         font-size: 17px;
         text-align: center;
-        color: #fff;
+        color: var(--color-text-light);
 
         @include laptop {
             position: static;

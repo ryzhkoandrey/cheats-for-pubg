@@ -30,7 +30,7 @@
                 transform: rotate(-45deg);
                 width: 40px;
                 height: 8px;
-                background: #fb8500;
+                background: var(--color-secondary-1);
 
                 @include mobile {
                     left: -16px;
@@ -50,7 +50,7 @@
                 right: -32px;
                 width: 40px;
                 height: 8px;
-                background: #0aa6fe;
+                background: var(--color-primary-1);
 
                 @include mobile {
                     bottom: -6px;
@@ -105,10 +105,6 @@
                     transform: rotate(45deg);
                 }
             }
-
-            .faq__answer {
-                overflow: visible;
-            }
         }
     }
 
@@ -119,7 +115,7 @@
         font-weight: 600;
         font-size: 18px;
         text-align: left;
-        color: #2e3a59;
+        color: var(--color-text-1);
 
         @include mobile {
             padding: 26px 50px 23px 20px;
@@ -127,7 +123,7 @@
         }
 
         &:hover {
-            color: #0aa6fe;
+            color: var(--color-primary-1);
 
             &::after {
                 transform: rotate(-180deg);
@@ -183,7 +179,7 @@
             bottom: 38px;
             left: 37px;
             width: 2px;
-            background: linear-gradient(174deg, #0aa6fe 0%, #05ffff 100%);
+            background: linear-gradient(174deg, var(--color-primary-1) 0%, #05ffff 100%);
 
             @include mobile {
                 top: 0;
@@ -197,7 +193,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 1.8;
-        color: #727272;
+        color: var(--color-text-2);
 
         @include mobile {
             font-size: 11px;
@@ -216,7 +212,7 @@
         font-weight: 500;
         font-size: 18px;
         text-decoration: underline;
-        color: #0aa6fe;
+        color: var(--color-primary-1);
 
         @include mobile {
             font-size: 13px;

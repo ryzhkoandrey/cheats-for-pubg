@@ -44,7 +44,7 @@
             position: absolute;
             width: 40px;
             height: 8px;
-            background: #fb8500;
+            background: var(--color-secondary-1);
             transform: rotate(-45deg);
 
             @include mobile {
@@ -150,7 +150,7 @@
     &__form-title {
         font-weight: 600;
         font-size: 18px;
-        color: #2e3a59;
+        color: var(--color-text-1);
 
         @include tablet-small {
             text-align: center;
@@ -191,7 +191,7 @@
         width: 100%;
         font-weight: 400;
         font-size: 14px;
-        color: #2e3a59;
+        color: var(--color-text-1);
         border-bottom: 1px solid rgba(165, 170, 183, .5);
 
         @include mobile {
@@ -200,7 +200,7 @@
         }
 
         &::placeholder {
-            color: rgba(46, 58, 89, 0.43);
+            color: var(--color-text-5);
         }
 
         &--name {

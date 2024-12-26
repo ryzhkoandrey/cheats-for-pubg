@@ -3,7 +3,7 @@
     font-size: 45px;
     text-align: center;
     text-transform: uppercase;
-    color: #2e3a59;
+    color: var(--color-text-1);
 
     @include tablet {
         font-size: 36px;
