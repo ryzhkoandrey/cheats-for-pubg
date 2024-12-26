@@ -78,6 +78,14 @@
         box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.03);
         background: #fff;
 
+        @include tablet-small {
+            padding: 50px 32px 33px 32px;
+        }
+
+        @include tablet-small {
+            margin: 0 auto;
+        }
+
         @include mobile {
             padding: 45px 30px 29px 30px;
         }
@@ -137,9 +145,12 @@
         font-size: 18px;
         color: #2e3a59;
 
+        @include tablet-small {
+            text-align: center;
+        }
+
         @include mobile {
             font-size: 14px;
-            text-align: center;
         }
     }
 
@@ -157,9 +168,13 @@
         align-items: center;
         gap: 20px;
 
+        @include tablet-small {
+            flex-direction: column;
+            gap: 42px;
+        }
+
         @include mobile {
             margin-bottom: 34px;
-            flex-direction: column;
             gap: 34px;
         }
     }

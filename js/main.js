@@ -206,7 +206,7 @@ function handleResize() {
     });
 }
 
-// Функция изменения высоты ответа
+// Изменение высоты ответа
 function changeAnswerHeight(toggler, isOpen) {
     const answer = toggler.nextElementSibling;
     if (isOpen) {
@@ -223,4 +223,6 @@ faqTogglers.forEach(toggler => {
 
 // Инициализация
 initializeFaq();
+
+// Изменение размера окна
 window.addEventListener('resize', handleResize);
