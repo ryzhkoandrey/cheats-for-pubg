@@ -1,0 +1,50 @@
+.mobile-menu {
+    position: fixed;
+    top: -120%;
+    left: 0;
+    overflow-y: auto;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    padding: 80px 15px;
+    background: #fff;
+    pointer-events: none;
+    transition: .2s;
+
+    &--active {
+        top: 0;
+        pointer-events: all;
+    }
+
+    &__close {
+        position: absolute;
+        top: 14px;
+        right: 18px;
+    }
+
+    &__close-img {}
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__item {}
+
+    &__link {
+        padding: 6px 12px;
+        font-family: var(--font-primary);
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 1.33333;
+        text-align: right;
+        color: var(--color-text-dark-2);
+
+        &:hover {
+            color: var(--color-primary-1);
+        }
+    }
+}
