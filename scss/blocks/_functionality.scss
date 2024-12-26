@@ -236,6 +236,7 @@
         }
 
         @include mobile {
+            padding: 0;
             max-width: 302px;
             gap: 25px;
         }
