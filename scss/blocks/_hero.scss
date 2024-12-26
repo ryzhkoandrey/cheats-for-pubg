@@ -16,7 +16,11 @@
         margin-bottom: 25px;
         padding-top: 94px;
         min-height: 619px;
-        background-image: url('../img/hero-bg-mobile.jpg');
+        background: var(--color-primary-2) url('../img/hero-bg-mobile.jpg') no-repeat bottom center / cover;
+
+        @media (min-resolution: 192dpi) {
+            background-image: url('../img/hero-bg-mobile@2x.jpg');
+        }
     }
 
     &__inner {
