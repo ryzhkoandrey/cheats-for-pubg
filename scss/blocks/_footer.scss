@@ -4,7 +4,7 @@
 
     &__navbar {
 
-        @include mobile {
+        @include laptop {
             display: none;
         }
     }
@@ -20,5 +20,9 @@
         font-size: 17px;
         text-align: center;
         color: #fff;
+
+        @include laptop {
+            position: static;
+        }
     }
 }

@@ -9,8 +9,15 @@
         background-image: url('../img/contacts-bg@2x.jpg');
     }
 
-    @include mobile {
+    @include laptop {
+        padding: 14px 0 200px;
+    }
+
+    @include tablet {
         padding: 14px 0 110px;
+    }
+
+    @include mobile {
         background-image: url('../img/contacts-bg-mobile.jpg');
 
         @media (min-resolution: 192dpi) {

@@ -186,6 +186,7 @@
             background: linear-gradient(174deg, #0aa6fe 0%, #05ffff 100%);
 
             @include mobile {
+                top: 0;
                 bottom: 22px;
                 left: 21px;
             }
