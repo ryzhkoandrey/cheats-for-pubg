@@ -3,10 +3,10 @@
     overflow: hidden;
     margin-bottom: -200px;
     padding: 13px 0 347px;
-    background: url('../img/contacts-bg.jpg') no-repeat top center / cover;
+    background: url('../img/contacts-bg.webp') no-repeat top center / cover;
 
     @media (min-resolution: 192dpi) {
-        background-image: url('../img/contacts-bg@2x.jpg');
+        background-image: url('../img/contacts-bg@2x.webp');
     }
 
     @include laptop {
@@ -18,10 +18,10 @@
     }
 
     @include mobile {
-        background-image: url('../img/contacts-bg-mobile.jpg');
+        background-image: url('../img/contacts-bg-mobile.webp');
 
         @media (min-resolution: 192dpi) {
-            background-image: url('../img/contacts-bg-mobile@2x.jpg');
+            background-image: url('../img/contacts-bg-mobile@2x.webp');
         }
     }
 

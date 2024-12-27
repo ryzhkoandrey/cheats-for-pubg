@@ -1,19 +1,19 @@
 .reviews {
     padding-top: 167px;
     min-height: 601px;
-    background: var(--color-primary-2) url('../img/reviews-bg.jpg') no-repeat top center / cover;
+    background: var(--color-primary-2) url('../img/reviews-bg.webp') no-repeat top center / cover;
 
     @media (min-resolution: 192dpi) {
-        background-image: url('../img/reviews-bg@2x.jpg');
+        background-image: url('../img/reviews-bg@2x.webp');
     }
 
     @include mobile {
         padding-top: 68px;
         min-height: 384px;
-        background-image: url('../img/reviews-bg-mobile.jpg');
+        background-image: url('../img/reviews-bg-mobile.webp');
 
         @media (min-resolution: 192dpi) {
-            background-image: url('../img/reviews-bg-mobile@2x.jpg');
+            background-image: url('../img/reviews-bg-mobile@2x.webp');
         }
     }
 
